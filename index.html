@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>岗位信息</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="岗位信息">
+<meta name="theme-color" content="#e74c3c">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%23e74c3c'/%3E%3Ctext x='160' y='240' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E岗%3C/text%3E%3Ctext x='352' y='240' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E位%3C/text%3E%3Ctext x='160' y='430' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E信%3C/text%3E%3Ctext x='352' y='430' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E息%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%23e74c3c'/%3E%3Ctext x='160' y='240' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E岗%3C/text%3E%3Ctext x='352' y='240' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E位%3C/text%3E%3Ctext x='160' y='430' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E信%3C/text%3E%3Ctext x='352' y='430' font-size='200' font-weight='900' fill='white' text-anchor='middle' font-family='PingFang SC,Microsoft YaHei,sans-serif'%3E息%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22%E5%B2%97%E4%BD%8D%E4%BF%A1%E6%81%AF%22%2C%22short_name%22%3A%22%E5%B2%97%E4%BD%8D%E4%BF%A1%E6%81%AF%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%23e74c3c%22%2C%22description%22%3A%22%E5%B2%97%E4%BD%8D%E6%9F%A5%E8%AF%A2%20%C2%B7%20%E5%B0%81%E9%9D%A2%E5%88%B6%E4%BD%9C%20%C2%B7%20%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%2520xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%2520viewBox%3D'0%25200%2520512%2520512'%253E%253Crect%2520width%3D'512'%2520height%3D'512'%2520rx%3D'100'%2520fill%3D'%2523e74c3c'%2F%253E%253Ctext%2520x%3D'160'%2520y%3D'240'%2520font-size%3D'200'%2520font-weight%3D'900'%2520fill%3D'white'%2520text-anchor%3D'middle'%2520font-family%3D'PingFang%2520SC%2CMicrosoft%2520YaHei%2Csans-serif'%253E%25E5%25B2%2597%253C%2Ftext%253E%253Ctext%2520x%3D'352'%2520y%3D'240'%2520font-size%3D'200'%2520font-weight%3D'900'%2520fill%3D'white'%2520text-anchor%3D'middle'%2520font-family%3D'PingFang%2520SC%2CMicrosoft%2520YaHei%2Csans-serif'%253E%25E4%25BD%258D%253C%2Ftext%253E%253Ctext%2520x%3D'160'%2520y%3D'430'%2520font-size%3D'200'%2520font-weight%3D'900'%2520fill%3D'white'%2520text-anchor%3D'middle'%2520font-family%3D'PingFang%2520SC%2CMicrosoft%2520YaHei%2Csans-serif'%253E%25E4%25BF%25A1%253C%2Ftext%253E%253Ctext%2520x%3D'352'%2520y%3D'430'%2520font-size%3D'200'%2520font-weight%3D'900'%2520fill%3D'white'%2520text-anchor%3D'middle'%2520font-family%3D'PingFang%2520SC%2CMicrosoft%2520YaHei%2Csans-serif'%253E%25E6%2581%25AF%253C%2Ftext%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@400;700;900&family=ZCOOL+KuaiLe&family=ZCOOL+QingKe+HuangYou&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<style>
+/* ==================== 全局重置 & 导航 ==================== */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f5;color:#333;line-height:1.6}
+.page{display:none}.page.active{display:block}
+
+.top-nav{position:sticky;top:0;z-index:200;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1);display:flex}
+.top-nav button{flex:1;padding:14px 0;font-size:14px;font-weight:700;border:none;background:transparent;cursor:pointer;position:relative;color:#888;transition:all .2s}
+.top-nav button.active{color:#e74c3c}
+.top-nav button.active::after{content:'';position:absolute;bottom:0;left:20%;right:20%;height:3px;background:linear-gradient(90deg,#e74c3c,#c0392b);border-radius:2px}
+.top-nav button:active{background:#f9f9f9}
+
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#1a1a2e;color:#fff;padding:10px 24px;border-radius:30px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:9999}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ==================== P1: 岗位查询工具 ==================== */
+.q-header{background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff;padding:24px 20px 20px;text-align:center}
+.q-header h1{font-size:22px;font-weight:700;margin-bottom:4px}
+.q-header p{font-size:13px;opacity:.85}
+
+.q-search-bar{background:#fff;padding:16px 16px 0;box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:49px;z-index:100}
+.q-search-wrap{display:flex;gap:10px;margin-bottom:12px}
+.q-search-wrap input{flex:1;border:2px solid #e74c3c;border-radius:8px;padding:10px 14px;font-size:15px;outline:none}
+.q-search-wrap input::placeholder{color:#aaa}
+.q-search-wrap button{background:#e74c3c;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer}
+.q-search-wrap button:hover{background:#c0392b}
+
+.q-tabs{display:flex;gap:0;border-bottom:2px solid #e74c3c}
+.q-tab{flex:1;padding:10px 0;text-align:center;font-size:14px;font-weight:600;color:#888;cursor:pointer;border-radius:6px 6px 0 0;transition:all .2s}
+.q-tab.active{color:#e74c3c;background:#fff5f5;border:2px solid #e74c3c;border-bottom:2px solid #fff;margin-bottom:-2px}
+.q-tab span{font-size:12px;background:#eee;border-radius:10px;padding:2px 7px;margin-left:4px}
+.q-tab.active span{background:#fdd;color:#c0392b}
+
+.q-tag-filter{padding:10px 16px 8px;display:flex;gap:6px;flex-wrap:wrap;background:#fff}
+.q-tag-btn{background:#f7f7f7;border:1px solid #ddd;border-radius:20px;padding:5px 12px;font-size:12px;cursor:pointer;transition:all .15s}
+.q-tag-btn:hover,.q-tag-btn.active{background:#e74c3c;color:#fff;border-color:#e74c3c}
+
+.q-info{padding:10px 16px 6px;font-size:13px;color:#888;display:flex;align-items:center;gap:8px}
+.q-info b{color:#e74c3c}
+.sync-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.sync-dot.loading{background:#f39c12;animation:pulse 1s infinite}
+.sync-dot.cloud{background:#2ecc71}
+.sync-dot.local{background:#e74c3c}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.q-list{padding:0 16px 90px}
+
+.q-card{background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #e74c3c;cursor:pointer;transition:box-shadow .2s,transform .1s;position:relative}
+.q-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.13);transform:translateY(-1px)}
+.q-card-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:8px}
+.q-card-school{font-size:15px;font-weight:700;color:#222;flex:1}
+.q-card-badge{font-size:11px;border-radius:4px;padding:2px 7px;white-space:nowrap;flex-shrink:0}
+.q-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.q-card-tag{background:#fff5f5;color:#e74c3c;border:1px solid #fcd;border-radius:5px;padding:2px 8px;font-size:12px;font-weight:500}
+.q-card-tag.subject{background:#fff8e1;color:#f57c00;border-color:#ffe082}
+.q-card-tag.salary{background:#e8f5e9;color:#2e7d32;border-color:#a5d6a7}
+.q-card-tag.area{background:#f3e5f5;color:#7b1fa2;border-color:#ce93d8}
+.q-card-summary{font-size:12px;color:#888;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.q-card-arrow{position:absolute;right:14px;bottom:12px;font-size:13px;color:#ccc}
+.q-card-actions{display:flex;gap:6px;margin-left:auto}
+.q-card-btn{background:none;border:1px solid #e0e0e0;border-radius:6px;padding:2px 8px;font-size:13px;color:#999;cursor:pointer;transition:all .15s}
+.q-card-btn:hover{background:#e74c3c;color:#fff;border-color:#e74c3c}
+.q-card-btn.edit:hover{background:#3498db;border-color:#3498db}
+.q-card-label{position:absolute;left:14px;top:46px}
+
+.q-highlight{background:#ffef9a;border-radius:2px;padding:0 1px}
+
+/* 详情弹窗 */
+.q-modal-mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;align-items:flex-end;justify-content:center}
+.q-modal-mask.show{display:flex;animation:qFadeIn .18s ease}
+@keyframes qFadeIn{from{opacity:0}to{opacity:1}}
+.q-modal{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:680px;max-height:88vh;overflow-y:auto;animation:qSlideUp .22s cubic-bezier(.34,1.25,.64,1)}
+@keyframes qSlideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.q-modal-handle{text-align:center;padding:12px 0 4px}
+.q-modal-handle::before{content:'';display:inline-block;width:40px;height:4px;background:#ddd;border-radius:2px}
+.q-modal-header{padding:8px 20px 14px;border-bottom:1px solid #f0f0f0;position:relative}
+.q-modal-type-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.q-modal-title{font-size:20px;font-weight:800;color:#111;line-height:1.3}
+.q-modal-close{position:absolute;right:16px;top:8px;width:30px;height:30px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;color:#666}
+.q-modal-body{padding:16px 20px 30px}
+.q-section{margin-bottom:18px}
+.q-section-title{font-size:12px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.q-section-title::after{content:'';flex:1;height:1px;background:#f0f0f0}
+.q-detail-row{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.q-detail-label{font-size:13px;color:#999;width:56px;flex-shrink:0;padding-top:2px}
+.q-detail-value{font-size:14px;color:#222;line-height:1.6;flex:1;word-break:break-all}
+.q-subject-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.q-subject-chip{background:#fff8e1;color:#f57c00;border:1px solid #ffe082;border-radius:6px;padding:4px 10px;font-size:13px;font-weight:500}
+.q-salary-hl{display:inline-block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;border-radius:8px;padding:8px 14px;font-size:15px;font-weight:700;margin-top:4px}
+.q-salary-hl.empty{background:#f5f5f5;color:#aaa;border-color:#e0e0e0;font-weight:400;font-size:13px}
+.q-info-block{background:#f8f8f8;border-radius:10px;padding:12px 14px;font-size:13px;color:#444;line-height:1.8;white-space:pre-wrap;word-break:break-all}
+
+.q-no-result{text-align:center;padding:60px 20px;color:#aaa;font-size:15px}
+.q-no-result span{font-size:40px;display:block;margin-bottom:12px}
+
+/* 编辑弹窗 */
+.edit-mask{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1001;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .25s}
+.edit-mask.show{opacity:1;pointer-events:auto}
+.edit-panel{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:600px;margin:0 auto;max-height:85vh;overflow-y:auto;box-shadow:0 -4px 30px rgba(0,0,0,.15)}
+.edit-handle{width:40px;height:4px;background:#ddd;border-radius:2px;margin:10px auto}
+.edit-head{display:flex;justify-content:space-between;align-items:center;padding:8px 20px}
+.edit-head h3{font-size:18px;font-weight:800;color:#1a1a2e}
+.edit-close{width:32px;height:32px;border-radius:50%;background:#f0f0f0;border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#666}
+.edit-body{padding:0 20px 40px}
+
+/* 管理端口FAB */
+.admin-fab{position:fixed;bottom:24px;right:20px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2e7d32,#43a047);color:#fff;border:none;font-size:26px;cursor:pointer;box-shadow:0 4px 16px rgba(46,125,50,.4);z-index:300;display:none;align-items:center;justify-content:center;transition:transform .2s}
+.admin-fab:active{transform:scale(.9)}
+
+/* 管理面板 */
+.admin-mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:400;align-items:flex-end;justify-content:center}
+.admin-mask.show{display:flex;animation:qFadeIn .18s ease}
+.admin-panel{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;animation:qSlideUp .22s cubic-bezier(.34,1.25,.64,1)}
+.admin-handle{text-align:center;padding:12px 0 4px}
+.admin-handle::before{content:'';display:inline-block;width:40px;height:4px;background:#ddd;border-radius:2px}
+.admin-head{padding:8px 20px 16px;border-bottom:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center}
+.admin-head h3{font-size:18px;font-weight:800;color:#1a1a2e}
+.admin-close{width:32px;height:32px;border-radius:50%;background:#f0f0f0;border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#666}
+.admin-body{padding:16px 20px 40px}
+.admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-form-grid .full{grid-column:1/-1}
+.admin-fg label{display:block;font-size:13px;font-weight:600;color:#333;margin-bottom:4px}
+.admin-fg input,.admin-fg textarea,.admin-fg select{width:100%;padding:10px 12px;border:2px solid #e0e0e0;border-radius:10px;font-size:14px;font-family:inherit;background:#fafafa;transition:border .2s}
+.admin-fg input:focus,.admin-fg textarea:focus,.admin-fg select:focus{outline:none;border-color:#2e7d32}
+.admin-fg textarea{min-height:70px;resize:vertical}
+.admin-submit{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#2e7d32,#43a047);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;transition:transform .15s}
+.admin-submit:hover{transform:translateY(-2px)}
+.admin-submit:active{transform:translateY(0)}
+.admin-paste-area h4{font-size:15px;font-weight:700;color:#333;margin-bottom:12px}
+.admin-paste-area textarea{width:100%;min-height:140px;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:14px;font-family:inherit;resize:vertical;line-height:1.6;box-sizing:border-box}
+.admin-paste-area textarea:focus{outline:none;border-color:#2e7d32}
+.admin-paste-actions{display:flex;gap:10px;margin-top:12px}
+.admin-parse-btn{flex:1;padding:12px;background:linear-gradient(135deg,#2e7d32,#43a047);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;transition:transform .15s}
+.admin-parse-btn:hover{transform:translateY(-1px)}
+.admin-example-btn{padding:12px 18px;background:#f0f0f0;color:#555;border:none;border-radius:10px;font-size:14px;cursor:pointer;transition:background .2s}
+.admin-example-btn:hover{background:#e0e0e0}
+.admin-preview{margin-top:20px;padding-top:20px;border-top:2px solid #e8e8e8}
+.admin-preview h4{font-size:15px;font-weight:700;color:#2e7d32;margin-bottom:14px}
+.admin-preview .admin-fg input{border-color:#2e7d32;background:#f0fff0}
+
+.admin-added-title{font-size:16px;font-weight:800;color:#1a1a2e;margin:0 0 12px;padding:12px 0;border-top:2px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.admin-added-item{background:#f8f8f8;border-radius:10px;padding:12px 14px;margin-bottom:8px;position:relative;border-left:4px solid #2e7d32}
+.admin-added-item .ai-school{font-size:14px;font-weight:700;color:#222}
+.admin-added-item .ai-subject{font-size:12px;color:#666;margin-top:2px}
+.admin-added-item .ai-btns{display:flex;gap:8px;margin-top:8px}
+.admin-added-item .ai-edit{background:#3498db;color:#fff;border:none;border-radius:6px;padding:4px 14px;font-size:12px;cursor:pointer}
+.admin-added-item .ai-edit:hover{background:#2980b9}
+.admin-added-item .ai-del{background:none;border:1px solid #ddd;border-radius:6px;padding:4px 14px;font-size:12px;color:#999;cursor:pointer}
+.admin-added-item .ai-del:hover{background:#e74c3c;color:#fff;border-color:#e74c3c}
+
+/* ==================== P2: 封面模板工具 ==================== */
+.cv-page{background:#1a1a2e;padding:12px;max-width:100%}
+.cv-page h1{color:#fff;text-align:center;font-size:18px;margin-bottom:4px;letter-spacing:2px}
+.cv-page h2.sub{text-align:center;color:rgba(255,255,255,.5);font-size:12px;margin-bottom:10px;font-weight:400}
+.cv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:500px){.cv-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}}
+.cv-cover{width:100%;aspect-ratio:3/4;border-radius:10px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4);position:relative;display:flex;flex-direction:column}
+.cv-tlabel{text-align:center;margin-top:8px;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px}
+
+.cv-c1{background:linear-gradient(160deg,#fce4ec,#f8bbd0,#f48fb1)}.cv-c1 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:28px 20px;text-align:center}.cv-c1 .mt{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:900;color:#c62828;line-height:1.4;letter-spacing:3px;outline:none}.cv-c1 .st{font-family:'Noto Sans SC',sans-serif;font-size:14px;color:#5d4037;margin-top:14px;line-height:1.8;outline:none;max-width:88%}.cv-c1 .ia{height:40%;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#bbb;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.6)}.cv-c1 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c1 .ia .ic{font-size:28px}.cv-c1 .bd{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#c62828;font-weight:700}
+
+.cv-c2{background:linear-gradient(180deg,#fff3e0,#ffe0b2,#ffcc80)}.cv-c2 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;padding:28px 20px;text-align:left}.cv-c2 .mt{font-family:'ZCOOL KuaiLe',sans-serif;font-size:32px;font-weight:400;color:#bf360c;line-height:1.5;letter-spacing:2px;outline:none}.cv-c2 .st{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:#6d4c41;margin-top:14px;line-height:1.9;outline:none;background:rgba(255,255,255,.45);padding:10px 14px;border-radius:8px}.cv-c2 .ia{height:38%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#aaa;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.5)}.cv-c2 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c2 .ia .ic{font-size:28px}.cv-c2 .bd{position:absolute;top:10px;right:10px;background:rgba(191,54,12,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700}
+
+.cv-c3{background:#1a237e}.cv-c3 .banner{background:#ffd600;padding:8px 0;text-align:center;font-family:'ZCOOL QingKe HuangYou',sans-serif;font-size:11px;color:#1a237e;font-weight:700;letter-spacing:4px}.cv-c3 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 20px;text-align:center}.cv-c3 .mt{font-family:'ZCOOL QingKe HuangYou',sans-serif;font-size:36px;font-weight:400;color:#fff;line-height:1.4;letter-spacing:2px;outline:none}.cv-c3 .st{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:rgba(255,255,255,.7);margin-top:14px;line-height:1.8;outline:none}.cv-c3 .ia{height:35%;background:#283593;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.3);font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,214,0,.3)}.cv-c3 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c3 .ia .ic{font-size:28px}.cv-c3 .bd{position:absolute;top:36px;right:10px;background:#ffd600;padding:3px 10px;border-radius:12px;font-size:10px;color:#1a237e;font-weight:700}
+
+.cv-c4{background:linear-gradient(135deg,#e8f5e9,#c8e6c9,#a5d6a7)}.cv-c4 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding:28px 20px;text-align:right}.cv-c4 .tag{background:#2e7d32;color:#fff;padding:4px 14px;border-radius:4px;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:2px;outline:none;font-family:'Noto Sans SC',sans-serif}.cv-c4 .mt{font-family:'Ma Shan Zheng',cursive;font-size:38px;font-weight:400;color:#1b5e20;line-height:1.5;letter-spacing:2px;outline:none}.cv-c4 .st{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:#33691e;margin-top:14px;line-height:1.8;outline:none;max-width:90%}.cv-c4 .ia{height:38%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#aaa;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.5)}.cv-c4 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c4 .ia .ic{font-size:28px}.cv-c4 .bd{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#2e7d32;font-weight:700}
+
+.cv-c5{background:linear-gradient(160deg,#fff8e1,#ffecb3,#ffe082);overflow:hidden}.cv-c5 .circle{position:absolute;width:85%;height:50%;top:8%;left:7.5%;border-radius:50%;background:rgba(255,152,0,.12);border:2px dashed rgba(255,152,0,.3)}.cv-c5 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 16px;text-align:center;position:relative;z-index:1}.cv-c5 .mt{font-family:'Noto Serif SC',serif;font-size:30px;font-weight:900;color:#e65100;line-height:1.4;letter-spacing:2px;outline:none}.cv-c5 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#795548;margin-top:12px;line-height:1.9;outline:none;max-width:85%;background:rgba(255,255,255,.5);padding:8px 12px;border-radius:20px}.cv-c5 .ia{height:38%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#aaa;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.5);z-index:1}.cv-c5 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c5 .ia .ic{font-size:28px}.cv-c5 .bd{position:absolute;top:10px;right:10px;background:rgba(230,81,0,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c6{background:#fff}.cv-c6 .top{flex:1;background:#d50000;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 16px;text-align:center;position:relative}.cv-c6 .mt{font-family:'Noto Sans SC',sans-serif;font-size:34px;font-weight:900;color:#fff;line-height:1.4;letter-spacing:3px;outline:none}.cv-c6 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.8);margin-top:12px;line-height:1.9;outline:none;max-width:90%}.cv-c6 .ia{height:38%;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#bbb;font-size:11px;position:relative;cursor:pointer}.cv-c6 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c6 .ia .ic{font-size:28px}.cv-c6 .bd{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c7{background:linear-gradient(180deg,#37474f,#263238)}.cv-c7 .zone{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 20px 20px;text-align:left}.cv-c7 .mt{font-family:'ZCOOL XiaoWei',serif;font-size:32px;font-weight:400;color:#fff;line-height:1.5;letter-spacing:2px;outline:none}.cv-c7 .line{width:40px;height:3px;background:#ff6f00;margin:10px 0}.cv-c7 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.6);line-height:1.8;outline:none}.cv-c7 .ia{height:40%;background:#455a64;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.25);font-size:11px;position:relative;cursor:pointer}.cv-c7 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c7 .ia .ic{font-size:28px}.cv-c7 .bd{position:absolute;top:10px;left:10px;background:#ff6f00;padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700}
+
+.cv-c8{background:linear-gradient(160deg,#f3e5f5,#e1bee7,#ce93d8)}.cv-c8 .deco{position:absolute;left:20px;top:10%;height:80%;width:3px;background:rgba(123,31,162,.2);border-radius:2px}.cv-c8 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 28px;text-align:center;position:relative}.cv-c8 .mt{font-family:'Ma Shan Zheng',cursive;font-size:36px;font-weight:400;color:#6a1b9a;line-height:1.5;letter-spacing:3px;outline:none}.cv-c8 .st{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:#4a148c;margin-top:14px;line-height:1.8;outline:none;max-width:88%}.cv-c8 .ia{height:38%;background:#e0d0e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#b39ddb;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.4)}.cv-c8 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c8 .ia .ic{font-size:28px}.cv-c8 .bd{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#6a1b9a;font-weight:700}
+
+.cv-c9{background:#004d40;overflow:hidden}.cv-c9 .stripe{position:absolute;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.08)}.cv-c9 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:28px 16px;text-align:center;position:relative;z-index:1}.cv-c9 .mt{font-family:'ZCOOL KuaiLe',sans-serif;font-size:32px;font-weight:400;color:#e0f2f1;line-height:1.5;letter-spacing:2px;outline:none;text-shadow:0 2px 8px rgba(0,0,0,.3)}.cv-c9 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:14px;line-height:1.9;outline:none;max-width:85%;border:1px solid rgba(255,255,255,.15);padding:8px 14px;border-radius:6px}.cv-c9 .ia{height:35%;background:#00695c;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.2);font-size:11px;position:relative;cursor:pointer;z-index:1}.cv-c9 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c9 .ia .ic{font-size:28px}.cv-c9 .bd{position:absolute;top:66px;right:10px;background:#00e676;padding:3px 10px;border-radius:12px;font-size:10px;color:#004d40;font-weight:700;z-index:2}
+
+.cv-c10{background:linear-gradient(180deg,#263238,#37474f)}.cv-c10 .cv-inner-card{margin:14px;background:rgba(255,255,255,.95);border-radius:14px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 18px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.2)}.cv-c10 .mt{font-family:'Noto Serif SC',serif;font-size:30px;font-weight:900;color:#c62828;line-height:1.4;letter-spacing:2px;outline:none}.cv-c10 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#546e7a;margin-top:14px;line-height:1.8;outline:none;max-width:88%}.cv-c10 .ia{height:36%;background:#455a64;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.25);font-size:11px;position:relative;cursor:pointer}.cv-c10 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c10 .ia .ic{font-size:28px}.cv-c10 .bd{position:absolute;top:6px;left:50%;transform:translateX(-50%);background:#c62828;padding:3px 14px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c11{background:linear-gradient(160deg,#fff0f0,#ff8a80,#ff5252)}.cv-c11 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;padding:20px 20px;text-align:left}.cv-c11 .mt{font-family:'Ma Shan Zheng',cursive;font-size:34px;font-weight:400;color:#fff;line-height:1.4;letter-spacing:2px;outline:none;text-shadow:0 2px 6px rgba(0,0,0,.15)}.cv-c11 .st{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:rgba(255,255,255,.9);margin-top:12px;line-height:1.8;outline:none;max-width:90%;background:rgba(0,0,0,.12);padding:10px 14px;border-radius:8px}.cv-c11 .ia{height:38%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.5);font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.3)}.cv-c11 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c11 .ia .ic{font-size:28px}.cv-c11 .bd{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);padding:3px 10px;border-radius:12px;font-size:10px;color:#d32f2f;font-weight:700}
+
+.cv-c12{background:#fffde7}.cv-c12 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px 16px;text-align:center}.cv-c12 .cv-card-inner{background:#fff;border-radius:12px;padding:20px 16px;width:100%;box-shadow:0 2px 16px rgba(0,0,0,.06)}.cv-c12 .tag{display:inline-block;background:#f57f17;color:#fff;padding:3px 12px;border-radius:4px;font-size:11px;font-weight:700;margin-bottom:10px;letter-spacing:1px;outline:none}.cv-c12 .mt{font-family:'Noto Sans SC',sans-serif;font-size:28px;font-weight:900;color:#333;line-height:1.4;letter-spacing:1px;outline:none}.cv-c12 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#666;margin-top:10px;line-height:1.8;outline:none}.cv-c12 .ia{height:36%;background:#fff8e1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#ccc;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(245,127,23,.15)}.cv-c12 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c12 .ia .ic{font-size:28px}.cv-c12 .bd{position:absolute;top:10px;right:10px;background:rgba(245,127,23,.9);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700}
+
+.cv-c13{background:#5d4037}.cv-c13 .band-top{background:#8d6e63;padding:10px 16px;text-align:center;flex-shrink:0}.cv-c13 .band-top span{font-size:10px;color:rgba(255,255,255,.7);letter-spacing:3px;font-weight:600}.cv-c13 .band-mid{background:#6d4c41;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;text-align:center}.cv-c13 .tag{display:inline-block;background:#ffab00;color:#3e2723;padding:3px 12px;border-radius:4px;font-size:11px;font-weight:700;margin-bottom:10px;letter-spacing:1px;outline:none}.cv-c13 .mt{font-family:'ZCOOL XiaoWei',serif;font-size:30px;font-weight:400;color:#fff;line-height:1.4;letter-spacing:2px;outline:none}.cv-c13 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.75);margin-top:12px;line-height:1.8;outline:none;max-width:88%}.cv-c13 .ia{height:34%;background:#4e342e;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.2);font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(255,255,255,.1)}.cv-c13 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c13 .ia .ic{font-size:28px}.cv-c13 .bd{position:absolute;top:40px;right:10px;background:#ffab00;padding:3px 10px;border-radius:12px;font-size:10px;color:#3e2723;font-weight:700}
+
+.cv-c14{background:#fce4ec;overflow:hidden}.cv-c14 .left-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:#e91e63}.cv-c14 .right-bar{position:absolute;right:0;top:0;bottom:0;width:6px;background:#e91e63}.cv-c14 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 24px;text-align:center;position:relative;z-index:1}.cv-c14 .mt{font-family:'Ma Shan Zheng',cursive;font-size:34px;font-weight:400;color:#ad1457;line-height:1.5;letter-spacing:2px;outline:none}.cv-c14 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#880e4f;margin-top:12px;line-height:1.8;outline:none;max-width:85%}.cv-c14 .ia{height:36%;background:rgba(233,30,99,.08);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#f48fb1;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(233,30,99,.15);z-index:1}.cv-c14 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c14 .ia .ic{font-size:28px}.cv-c14 .bd{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:#e91e63;padding:3px 14px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c15{background:linear-gradient(180deg,#1a0033,#4a148c)}.cv-c15 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 20px;text-align:center}.cv-c15 .glow{position:absolute;width:70%;height:40%;top:5%;left:15%;border-radius:50%;background:rgba(156,39,176,.15);filter:blur(30px)}.cv-c15 .mt{font-family:'Noto Sans SC',sans-serif;font-size:30px;font-weight:900;color:#fff;line-height:1.4;letter-spacing:2px;outline:none;position:relative;z-index:1}.cv-c15 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.7);margin-top:12px;line-height:1.8;outline:none;max-width:85%;position:relative;z-index:1}.cv-c15 .ia{height:36%;background:rgba(74,20,140,.5);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.2);font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(156,39,176,.3);z-index:1}.cv-c15 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c15 .ia .ic{font-size:28px}.cv-c15 .bd{position:absolute;top:10px;right:10px;background:rgba(156,39,176,.8);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c16{background:#f1f8e9}.cv-c16 .sidebar{position:absolute;left:0;top:0;bottom:0;width:52px;background:#2e7d32;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:1}.cv-c16 .sidebar span{writing-mode:vertical-rl;color:#fff;font-size:9px;font-weight:700;letter-spacing:3px}.cv-c16 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 20px 24px 68px;text-align:left}.cv-c16 .mt{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:900;color:#1b5e20;line-height:1.4;letter-spacing:1px;outline:none}.cv-c16 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#2e7d32;margin-top:12px;line-height:1.8;outline:none}.cv-c16 .ia{height:34%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#a5d6a7;font-size:11px;position:relative;cursor:pointer;border-top:2px solid rgba(46,125,50,.15)}.cv-c16 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c16 .ia .ic{font-size:28px}.cv-c16 .bd{position:absolute;top:10px;right:10px;background:#2e7d32;padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c17{background:linear-gradient(160deg,#d7ccc8,#bcaaa4,#a1887f)}.cv-c17 .cv-frame{margin:16px;background:rgba(255,255,255,.92);border-radius:16px;border:2px solid #5d4037;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 18px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.1)}.cv-c17 .mt{font-family:'Ma Shan Zheng',cursive;font-size:30px;font-weight:400;color:#3e2723;line-height:1.4;letter-spacing:2px;outline:none}.cv-c17 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#5d4037;margin-top:12px;line-height:1.8;outline:none;max-width:85%}.cv-c17 .ia{height:34%;background:rgba(93,64,55,.15);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(93,64,55,.35);font-size:11px;position:relative;cursor:pointer}.cv-c17 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c17 .ia .ic{font-size:28px}.cv-c17 .bd{position:absolute;top:24px;left:50%;transform:translateX(-50%);background:#5d4037;padding:3px 14px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+.cv-c18{background:linear-gradient(180deg,#0d47a1,#1565c0);overflow:hidden}.cv-c18 .trap{position:absolute;top:0;left:4%;right:4%;height:55%;background:linear-gradient(180deg,rgba(13,71,161,.95),rgba(13,71,161,.7));clip-path:polygon(0 0,100% 0,94% 100%,6% 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:28px;text-align:center;z-index:1}.cv-c18 .mt{font-family:'ZCOOL KuaiLe',sans-serif;font-size:30px;font-weight:400;color:#fff;line-height:1.4;letter-spacing:2px;outline:none}.cv-c18 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.7);margin-top:10px;line-height:1.8;outline:none;max-width:80%}.cv-c18 .ia{height:36%;background:rgba(21,101,192,.6);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.2);font-size:11px;position:relative;cursor:pointer;z-index:0}.cv-c18 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c18 .ia .ic{font-size:28px}.cv-c18 .bd{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:3}
+
+.cv-c19{background:linear-gradient(160deg,#2c2c2c,#1a1a1a)}.cv-c19 .vlog{position:absolute;top:14px;left:14px;background:#ffab00;color:#333;padding:3px 10px;border-radius:4px;font-size:10px;font-weight:900;letter-spacing:2px;z-index:3}.cv-c19 .zone{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 20px 20px;text-align:left}.cv-c19 .mt{font-family:'Noto Sans SC',sans-serif;font-size:28px;font-weight:900;color:#fff;line-height:1.4;letter-spacing:1px;outline:none}.cv-c19 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:rgba(255,255,255,.65);margin-top:10px;line-height:1.8;outline:none}.cv-c19 .ia{height:38%;background:#333;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(255,255,255,.15);font-size:11px;position:relative;cursor:pointer}.cv-c19 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c19 .ia .ic{font-size:28px}.cv-c19 .bd{position:absolute;top:14px;right:14px;background:rgba(255,171,0,.85);padding:3px 10px;border-radius:12px;font-size:10px;color:#333;font-weight:700;z-index:3}
+
+.cv-c20{background:#eceff1;flex-direction:row}.cv-c20 .zone{flex:1;display:flex;flex-direction:column;justify-content:center;padding:20px;text-align:left}.cv-c20 .tag{display:inline-block;background:#37474f;color:#fff;padding:3px 12px;border-radius:4px;font-size:11px;font-weight:700;margin-bottom:10px;letter-spacing:1px;outline:none}.cv-c20 .mt{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:900;color:#263238;line-height:1.4;letter-spacing:1px;outline:none}.cv-c20 .st{font-family:'Noto Sans SC',sans-serif;font-size:12px;color:#546e7a;margin-top:10px;line-height:1.8;outline:none}.cv-c20 .ia{width:45%;height:100%;background:#cfd8dc;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:rgba(0,0,0,.2);font-size:11px;position:relative;cursor:pointer;border-left:2px solid rgba(0,0,0,.08)}.cv-c20 .ia input{position:absolute;width:100%;height:100%;opacity:0;cursor:pointer}.cv-c20 .ia .ic{font-size:28px}.cv-c20 .bd{position:absolute;top:10px;right:10px;background:rgba(55,71,79,.8);padding:3px 10px;border-radius:12px;font-size:10px;color:#fff;font-weight:700;z-index:2}
+
+[contenteditable]:focus{outline:2px dashed rgba(255,255,255,.4);outline-offset:4px;border-radius:4px}
+.cv-c6 [contenteditable]:focus,.cv-c10 .cv-inner-card [contenteditable]:focus,.cv-c12 .cv-card-inner [contenteditable]:focus,.cv-c17 .cv-frame [contenteditable]:focus{outline:2px dashed rgba(0,0,0,.2)}
+.cv-upload-btn{display:inline-block;padding:5px 14px;background:rgba(255,255,255,.8);color:#333;border-radius:20px;font-size:11px;font-weight:600;margin-top:2px}
+.cv-c3 .cv-upload-btn,.cv-c7 .cv-upload-btn,.cv-c9 .cv-upload-btn,.cv-c10 .cv-upload-btn,.cv-c11 .cv-upload-btn,.cv-c13 .cv-upload-btn,.cv-c15 .cv-upload-btn,.cv-c18 .cv-upload-btn,.cv-c19 .cv-upload-btn{background:rgba(255,255,255,.15);color:rgba(255,255,255,.6)}
+.cv-ia{overflow:hidden;touch-action:none}
+.cv-ia img.dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
+.cv-ia .cv-img-wrap{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.cv-ia .cv-img-wrap img{position:absolute;top:50%;left:50%;transform-origin:0 0;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.cv-ia .cv-img-tools{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}
+.cv-ia .cv-img-tools button{padding:4px 10px;border:none;border-radius:14px;font-size:10px;font-weight:600;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.cv-ia .cv-img-tools .cv-tbtn{background:rgba(255,255,255,.75);color:#333}
+.cv-c3 .cv-ia .cv-tbtn,.cv-c7 .cv-ia .cv-tbtn,.cv-c9 .cv-ia .cv-tbtn,.cv-c10 .cv-ia .cv-tbtn,.cv-c11 .cv-ia .cv-tbtn,.cv-c13 .cv-ia .cv-tbtn,.cv-c15 .cv-ia .cv-tbtn,.cv-c18 .cv-ia .cv-tbtn,.cv-c19 .cv-ia .cv-tbtn{background:rgba(0,0,0,.4);color:rgba(255,255,255,.8)}
+.cv-ia .cv-zoom-hint{position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:10px;color:rgba(255,255,255,.6);background:rgba(0,0,0,.35);padding:2px 8px;border-radius:8px;z-index:5;pointer-events:none;display:none}
+.cv-ia .cv-zoom-hint.show{display:block}
+
+/* ==================== P3: 文案生成器 ==================== */
+.cp-page{background:#f5f0eb}
+.cp-app{max-width:920px;margin:0 auto;padding:20px 16px 60px}
+.cp-header{text-align:center;padding:24px 0 16px}
+.cp-header h1{font-size:26px;font-weight:800;background:linear-gradient(135deg,#ff6b35,#e63946);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+.cp-header p{color:#6c757d;font-size:13px}
+
+.cp-input-section{background:#fff;border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.cp-input-section h2{font-size:17px;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #f5f0eb;display:flex;align-items:center;gap:8px}
+.cp-input-section h2 span{font-size:20px}
+
+.cp-smart-box{background:linear-gradient(135deg,#fff8f0,#fff3e6);border:2px dashed #ffb74d;border-radius:12px;padding:16px;margin-bottom:16px}
+.cp-smart-box h3{font-size:14px;font-weight:700;color:#e65100;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.cp-smart-box textarea{width:100%;min-height:120px;padding:12px;border:2px solid #ffe0b2;border-radius:10px;font-size:14px;font-family:inherit;resize:vertical;background:#fff;transition:border .2s}
+.cp-smart-box textarea:focus{outline:none;border-color:#ff6b35}
+.cp-smart-actions{display:flex;gap:8px;margin-top:8px}
+.cp-smart-actions button{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s}
+.cp-btn-parse{background:#ff6b35;color:#fff}
+.cp-btn-parse:hover{background:#e65a28}
+.cp-btn-example{background:#fff;color:#ff6b35;border:1px solid #ff6b35!important}
+.cp-btn-example:hover{background:#fff0e6}
+
+.cp-or-divider{text-align:center;margin:16px 0;color:#6c757d;font-size:13px;position:relative}
+.cp-or-divider::before,.cp-or-divider::after{content:'';position:absolute;top:50%;width:40%;height:1px;background:#e0e0e0}
+.cp-or-divider::before{left:0}
+.cp-or-divider::after{right:0}
+
+.cp-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cp-form-grid .cp-full{grid-column:1/-1}
+.cp-form-group label{display:block;font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:4px}
+.cp-form-group input,.cp-form-group textarea,.cp-form-group select{width:100%;padding:10px 12px;border:2px solid #e0e0e0;border-radius:10px;font-size:14px;font-family:inherit;transition:border .2s;background:#f8f9fa}
+.cp-form-group input:focus,.cp-form-group textarea:focus,.cp-form-group select:focus{outline:none;border-color:#ff6b35}
+.cp-form-group textarea{min-height:55px;resize:vertical}
+.cp-form-group .hint{font-size:11px;color:#6c757d;margin-top:2px}
+.cp-parsed-badge{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;margin-left:6px}
+
+.cp-btn-gen{display:block;width:100%;margin-top:16px;padding:14px;background:linear-gradient(135deg,#ff6b35,#e63946);color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s;letter-spacing:1px}
+.cp-btn-gen:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,53,.35)}
+.cp-btn-gen:active{transform:translateY(0)}
+
+.cp-output{display:none}
+.cp-output.show{display:block}
+
+.cp-result-card{background:#fff;border-radius:16px;padding:22px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);position:relative}
+.cp-result-card .cp-tag{position:absolute;top:14px;right:14px;background:#ff6b35;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.cp-result-card h3{font-size:16px;font-weight:700;margin-bottom:10px;padding-right:80px}
+.cp-result-card h3 .emoji{margin-right:6px}
+
+.cp-formula-label{font-size:12px;color:#ff6b35;font-weight:700;margin:12px 0 6px;padding:4px 10px;background:#fff0e6;border-radius:6px;display:inline-block}
+
+.cp-title-item{padding:12px 14px;background:#f8f9fa;border-radius:10px;margin-bottom:8px;border-left:4px solid #ff6b35;cursor:pointer;transition:background .15s;position:relative}
+.cp-title-item:hover{background:#fff0e6}
+.cp-title-item .formula{font-size:11px;color:#6c757d;margin-bottom:4px}
+.cp-title-item .title-text{font-size:15px;font-weight:600;line-height:1.5}
+
+.cp-body-card{padding:14px 16px;background:#f8f9fa;border-radius:10px;margin-bottom:8px;border-left:4px solid #2d6a4f;position:relative}
+.cp-body-card .style-name{font-size:12px;color:#2d6a4f;font-weight:700;margin-bottom:6px}
+.cp-body-card .body-text{font-size:14px;line-height:1.7;white-space:pre-wrap;padding-right:60px}
+
+.cp-tag-section{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.cp-tag-chip{background:#f8f9fa;border:1px solid #e0e0e0;border-radius:20px;padding:4px 12px;font-size:13px;color:#1a1a2e;cursor:pointer;transition:all .15s}
+.cp-tag-chip:hover{background:#ff6b35;color:#fff;border-color:#ff6b35}
+.cp-tag-chip.must{background:#fff0e6;border-color:#ff6b35;color:#ff6b35;font-weight:600}
+
+.cp-reply-item{padding:10px 14px;background:#f8f9fa;border-radius:10px;margin-bottom:6px;font-size:13px;position:relative}
+.cp-reply-item .scene{font-size:11px;color:#6c5ce7;font-weight:700;margin-bottom:2px}
+
+.cp-copy-btn{position:absolute;right:8px;bottom:6px;background:none;border:1px solid #e0e0e0;border-radius:6px;padding:3px 8px;font-size:11px;color:#6c757d;cursor:pointer;transition:all .15s}
+.cp-copy-btn:hover{background:#6c5ce7;color:#fff;border-color:#6c5ce7}
+.cp-title-item .cp-copy-btn{right:10px;top:50%;transform:translateY(-50%)}
+.cp-title-item .cp-copy-btn:hover{background:#ff6b35;color:#fff;border-color:#ff6b35}
+
+@media(max-width:600px){.cp-form-grid{grid-template-columns:1fr}.cp-header h1{font-size:22px}.admin-form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ==================== 导航 ==================== -->
+<div class="top-nav">
+  <button class="active" onclick="switchPage('query')">🔍 岗位查询</button>
+  <button onclick="switchPage('cover')">🎨 封面制作</button>
+  <button onclick="switchPage('copy')">📝 文案生成</button>
+</div>
+
+<!-- ==================== P1: 岗位查询 ==================== -->
+<div id="page-query" class="page active">
+  <div class="q-header">
+    <h1>🔍 招聘岗位查询</h1>
+    <p>学校 + 国央企 · 点击卡片查看详情 · 绿色按钮添加岗位</p>
+  </div>
+  <div class="q-search-bar">
+    <div class="q-search-wrap">
+      <input id="qSearchInput" type="text" placeholder="搜学校、学科、地区… 如：广阳湾、生物、南岸" oninput="qDoSearch()" />
+      <button onclick="qClearSearch()">清空</button>
+    </div>
+    <div class="q-tabs">
+      <div class="q-tab active" id="qtab-all" onclick="qSwitchTab('all')">全部 <span id="qcount-all">0</span></div>
+      <div class="q-tab" id="qtab-school" onclick="qSwitchTab('school')">学校岗位 <span id="qcount-school">0</span></div>
+      <div class="q-tab" id="qtab-corp" onclick="qSwitchTab('corp')">国央企 <span id="qcount-corp">0</span></div>
+    </div>
+  </div>
+  <div class="q-tag-filter" id="qTagFilter"></div>
+  <div class="q-info"><span id="qResultsInfo"></span><span id="syncStatus" onclick="forceSync()" style="margin-left:auto;cursor:pointer;font-size:12px;color:#999"></span></div>
+  <div class="q-list" id="qList"></div>
+
+  <!-- 详情弹窗 -->
+  <div class="q-modal-mask" id="qModalMask" onclick="qCloseModal(event)">
+    <div class="q-modal" id="qModal">
+      <div class="q-modal-handle"></div>
+      <div class="q-modal-header">
+        <div class="q-modal-type-row">
+          <span id="qModalBadge" style="font-size:11px;border-radius:4px;padding:2px 8px;font-weight:600"></span>
+          <span id="qModalIdx" style="font-size:12px;color:#aaa"></span>
+        </div>
+        <div class="q-modal-title" id="qModalTitle"></div>
+        <div class="q-modal-close" onclick="qHideModal()">×</div>
+      </div>
+      <div class="q-modal-body" id="qModalBody"></div>
+    </div>
+  </div>
+
+  <!-- 编辑弹窗 -->
+  <div class="edit-mask" id="editMask" onclick="if(event.target===this)closeEditModal()">
+    <div class="edit-panel">
+      <div class="edit-handle"></div>
+      <div class="edit-head">
+        <h3>✎ 编辑岗位</h3>
+        <button class="edit-close" onclick="closeEditModal()">×</button>
+      </div>
+      <div class="edit-body">
+        <div class="admin-form-grid">
+          <div class="admin-fg">
+            <label>类型</label>
+            <select id="editType"><option value="school">学校岗位</option><option value="corp">国央企</option></select>
+          </div>
+          <div class="admin-fg">
+            <label>地区</label>
+            <input id="editArea" placeholder="例：南岸区" />
+          </div>
+          <div class="admin-fg full">
+            <label>学校/机构名称 *</label>
+            <input id="editSchool" placeholder="例：某某中学" />
+          </div>
+          <div class="admin-fg full">
+            <label>招聘学科/岗位 *</label>
+            <input id="editSubject" placeholder="例：语文、数学、英语" />
+          </div>
+          <div class="admin-fg full">
+            <label>薪资待遇</label>
+            <input id="editSalary" placeholder="例：5000-7000，五险一金" />
+          </div>
+          <div class="admin-fg">
+            <label>学历要求</label>
+            <input id="editEdu" placeholder="例：本科及以上" />
+          </div>
+          <div class="admin-fg">
+            <label>经验要求</label>
+            <input id="editExp" placeholder="例：有教学经验优先" />
+          </div>
+          <div class="admin-fg">
+            <label>合同类型</label>
+            <input id="editContract" placeholder="例：直签" />
+          </div>
+          <div class="admin-fg">
+            <label>额外福利</label>
+            <input id="editExtra" placeholder="例：包吃住、寒暑假" />
+          </div>
+          <div class="admin-fg full">
+            <label>详细说明</label>
+            <textarea id="editInfo" placeholder="完整的岗位描述信息"></textarea>
+          </div>
+        </div>
+        <button class="admin-submit" onclick="saveEdit()">✅ 保存修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 管理FAB -->
+  <button class="admin-fab" id="adminFab" onclick="openAdmin()">+</button>
+
+  <!-- 管理面板 -->
+  <div class="admin-mask" id="adminMask" onclick="if(event.target===this)hideAdmin()">
+    <div class="admin-panel">
+      <div class="admin-handle"></div>
+      <div class="admin-head">
+        <h3>➕ 添加岗位</h3>
+        <button class="admin-close" onclick="hideAdmin()">×</button>
+      </div>
+      <div class="admin-body">
+        <div class="admin-paste-area">
+          <h4>📋 一键添加岗位 — 粘贴 → 解析 → 核对 → 添加</h4>
+          <textarea id="admRawText" placeholder="直接把岗位信息粘贴到这里，例如：
+
+南岸某中学招聘
+初高中：语文、数学、英语、物理、化学、生物
+薪资：5000-8000，五险一金，包吃住
+要求：本科及以上，有教证
+直签"></textarea>
+          <div class="admin-paste-actions">
+            <button class="admin-parse-btn" onclick="admSmartParse()">🔍 智能解析</button>
+            <button class="admin-example-btn" onclick="admFillExample()">填入示例</button>
+          </div>
+        </div>
+        <div id="admPreview" class="admin-preview" style="display:none">
+          <h4>✅ 解析结果 — 请核对，可修改</h4>
+          <div class="admin-form-grid">
+            <div class="admin-fg">
+              <label>类型</label>
+              <select id="admType"><option value="school">学校岗位</option><option value="corp">国央企</option></select>
+            </div>
+            <div class="admin-fg">
+              <label>地区</label>
+              <input id="admArea" placeholder="例：南岸区" />
+            </div>
+            <div class="admin-fg full">
+              <label>学校/机构名称 *</label>
+              <input id="admSchool" placeholder="例：某某中学" />
+            </div>
+            <div class="admin-fg full">
+              <label>招聘学科/岗位 *</label>
+              <input id="admSubject" placeholder="例：语文、数学、英语" />
+            </div>
+            <div class="admin-fg full">
+              <label>薪资待遇</label>
+              <input id="admSalary" placeholder="例：5000-7000，五险一金" />
+            </div>
+            <div class="admin-fg">
+              <label>学历要求</label>
+              <input id="admEdu" placeholder="例：本科及以上" />
+            </div>
+            <div class="admin-fg">
+              <label>经验要求</label>
+              <input id="admExp" placeholder="例：有教学经验优先" />
+            </div>
+            <div class="admin-fg">
+              <label>合同类型</label>
+              <input id="admContract" placeholder="例：直签" />
+            </div>
+            <div class="admin-fg">
+              <label>额外福利</label>
+              <input id="admExtra" placeholder="例：包吃住、寒暑假" />
+            </div>
+            <div class="admin-fg full">
+              <label>详细说明</label>
+              <textarea id="admInfo" placeholder="完整的岗位描述信息"></textarea>
+            </div>
+          </div>
+          <button class="admin-submit" onclick="submitAdd()">✅ 确认添加到数据库</button>
+        </div>
+        <div id="adminAddedList" style="margin-top:20px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== P2: 封面制作 ==================== -->
+<div id="page-cover" class="page">
+  <div class="cv-page">
+    <h1>小红书爆款封面模板</h1>
+    <h2 class="sub">20种不同排版 · 不同字体 · 点击文字修改 · 图片可拖动缩放</h2>
+    <div class="cv-grid" id="cvGrid"></div>
+  </div>
+</div>
+
+<!-- ==================== P3: 文案生成 ==================== -->
+<div id="page-copy" class="page">
+  <div class="cp-page">
+  <div class="cp-app">
+    <div class="cp-header">
+      <h1>小红书爆款文案生成器</h1>
+      <p>v2 · 智能解析岗位信息 · 12种标题角度 · 8种正文风格</p>
+    </div>
+    <div class="cp-input-section">
+      <h2><span>📋</span> 岗位信息</h2>
+      <div class="cp-smart-box">
+        <h3>🧠 智能解析 — 直接粘贴招聘信息，自动识别拆分</h3>
+        <textarea id="cpRawText" placeholder="直接把招聘信息贴这里，例如：
+
+南岸某中学招聘
+初、高中各学科：语文、数学、英语、信息科技、音乐、美术、体育
+薪资待遇：工资面议，五险一金。享有与在编教师同等的教育培训机会。"></textarea>
+        <div class="cp-smart-actions">
+          <button class="cp-btn-parse" onclick="cpSmartParse()">智能解析</button>
+          <button class="cp-btn-example" onclick="cpFillExample()">填入示例</button>
+        </div>
+      </div>
+      <div class="cp-or-divider">或手动填写（解析后可修改）</div>
+      <div class="cp-form-grid">
+        <div class="cp-form-group"><label>学校/机构名称</label><input id="cpSchool" placeholder="例：南岸某中学" /></div>
+        <div class="cp-form-group"><label>所在地区</label><input id="cpCity" placeholder="例：重庆南岸" /></div>
+        <div class="cp-form-group cp-full"><label>招聘学科/岗位</label><textarea id="cpSubjects" placeholder="例：语文、数学、英语、物理..."></textarea></div>
+        <div class="cp-form-group cp-full"><label>薪资待遇</label><textarea id="cpSalary" placeholder="例：9-18万/年，五险一金"></textarea></div>
+        <div class="cp-form-group"><label>学历/经验要求</label><input id="cpRequire" placeholder="例：本科及以上，有教证" /></div>
+        <div class="cp-form-group"><label>额外福利/亮点</label><input id="cpBonus" placeholder="例：寒暑假、包吃住" /></div>
+        <div class="cp-form-group"><label>岗位类型</label><select id="cpJobtype"><option value="teacher">教师岗</option><option value="admin">行政岗</option><option value="counselor">辅导员/班主任助理</option><option value="fudao">教培/培训机构</option><option value="university">高校教师/行政</option><option value="other">其他</option></select></div>
+        <div class="cp-form-group"><label>生成数量</label><select id="cpAmount"><option value="all">全部生成（推荐）</option><option value="few">精简版（每类2条）</option></select></div>
+      </div>
+      <button class="cp-btn-gen" onclick="cpGenerate()">生成爆款文案</button>
+    </div>
+    <div class="cp-output" id="cpOutput">
+      <div class="cp-result-card"><div class="cp-tag" id="cpCountTag">0条</div><h3><span class="emoji">🔥</span> 爆款标题</h3><div id="cpTitles"></div></div>
+      <div class="cp-result-card"><h3><span class="emoji">📝</span> 正文文案</h3><div id="cpBodies"></div></div>
+      <div class="cp-result-card"><h3><span class="emoji">#️⃣</span> 话题标签</h3><div class="cp-tag-section" id="cpTags"></div></div>
+      <div class="cp-result-card"><h3><span class="emoji">💬</span> 评论回复话术</h3><div id="cpReplies"></div></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="toast" id="globalToast">已复制</div>
+
+<script>
+// ==================== 全局工具函数 ====================
+function showToast(msg){const t=document.getElementById('globalToast');t.textContent=msg||'已复制';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500)}
+function copyText(text){navigator.clipboard.writeText(text).then(()=>showToast()).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()})}
+
+// ==================== 导航 ====================
+function switchPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.top-nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelector('.top-nav button:nth-child('+(name==='query'?1:name==='cover'?2:3)+')').classList.add('active');
+  document.getElementById('adminFab').style.display=name==='query'?'flex':'none';
+  document.body.style.background=name==='cover'?'#1a1a2e':name==='copy'?'#f5f0eb':'#f5f5f5';
+  document.body.style.overflow=name==='cover'?'auto':'';
+}
+
+// ==================== P1: 岗位查询数据 ====================
+var schoolData=[
+  {idx:1,school:"复旦中学外国语学校",subject:"化学老师、体育老师",salary:"5-7K，具体面议",info:"渝中区某公立中学招聘\n要求专业对口，有教资，有高中工作经验优先\n薪资福利面议，马上面试",area:"渝中区",edu:"本科以上，有教资",exp:"有高中工作经验优先",contract:"",extra:""},
+  {idx:2,school:"合川应用职业学校、铜梁传媒职业学校",subject:"体育教师（啦啦操、健美操、排球、羽毛球）",salary:"工资4500-6000，五险一金、房补、包住、餐补",info:"大专院校招聘（合川、铜梁）：\n学历要求：本科（国家一级运动员及上）、硕士研究生\n岗位要求：热爱教育事业，认同职业教育理念",area:"合川 铜梁",edu:"本科（国家一级运动员及以上）或硕士研究生",exp:"热爱教育事业",contract:"",extra:"房补、包住、餐补"},
+  {idx:3,school:"行知育才",subject:"语文、数学、英语、音乐、美术、体育、生物、地理、化学等各科",salary:"月综合5000-7000，五险一金，工作餐，双休，带薪寒暑假",info:"九龙坡区某某公办学校\n要求：本科及以上学历，专业对口，有教资，有学校工作经验优先\n6月底7月初面试入职",area:"九龙坡区",edu:"本科及以上，有教资",exp:"有学校工作经验优先",contract:"",extra:"五险一金+工作餐+双休+带薪寒暑假，6月底7月初面试入职"},
+  {idx:4,school:"重庆蜀都职业学校",subject:"语文、数学、计算机、电子相关专业",salary:"综合工资4000-6000，买五险，包吃住",info:"重庆蜀都职业学校直签合同❗\n招聘4名班主任兼任课老师\n要求：本科以上，能上高考班课，有中职教育优先\n工作地点：渝北",area:"渝北",edu:"本科以上",exp:"能上高考班课，有中职教育经验优先",contract:"直签合同",extra:"包吃住"},
+  {idx:5,school:"忠县数字产业学院",subject:"资金专员（会计类）",salary:"综合4000-6000，五险一金，周末双休",info:"重庆忠县高校招聘资金专员\n1. 本科及以上、会计类相关专业\n2.熟悉银行业务，具备基础财务知识",area:"忠县",edu:"本科及以上，会计类相关专业",exp:"熟悉银行业务，具备基础财务知识",contract:"",extra:""},
+  {idx:6,school:"实验一小",subject:"语文",salary:"到手5000-6000，五险，工作餐，带薪寒暑假",info:"九龙坡区某小学需要语文老师1名，马上面试上岗！\n要求：本科、有教资、有经验。",area:"九龙坡区",edu:"本科，有教资",exp:"有经验",contract:"",extra:"工作餐+带薪寒暑假"},
+  {idx:7,school:"安防职业学校",subject:"体育教师、辅导员",salary:"工资4500-6000，包吃住，双休，带薪寒暑假",info:"某某大专院校招聘：体育教师、辅导员\n要求公办本科以上学历",area:"",edu:"公办本科以上",exp:"",contract:"",extra:"包吃住+双休+带薪寒暑假"},
+  {idx:8,school:"重庆主城区某高校",subject:"康复治疗、临床医学、中医学、口腔医学、护理学",salary:"综合薪资5000-7000，带薪寒暑假，节假日双休，五险一金",info:"重庆主城区某高校招聘专任教师数名\n要求全日制本科以上学历\n专业:康复治疗，临床医学，中医学，口腔医学，护理学等",area:"主城区",edu:"全日制本科以上",exp:"",contract:"",extra:"带薪寒暑假+节假日双休+五险一金"},
+  {idx:9,school:"南岸弹子石某小学",subject:"语文、数学、英语、体育（足球方向）",salary:"月综合5000-7000，五险一金，工作餐，双休，带薪寒暑假",info:"南岸区弹子石某某小学\n要求：本科及以上学历，专业对口，有教资，有学校工作经验优先\n5月面试，9月入职",area:"南岸区 弹子石",edu:"本科及以上，有教资",exp:"有学校工作经验优先",contract:"",extra:"五险一金+工作餐+双休+带薪寒暑假，9月入职"},
+  {idx:10,school:"复旦外国语学校",subject:"高三化学、体育老师",salary:"薪资面议",info:"渝中区某公立中学招聘一名高三化学老师、体育老师\n要求专业对口，有教资，有高中工作经验优先\n马上面试",area:"渝中区",edu:"本科以上，有教资",exp:"有高中工作经验优先",contract:"",extra:"马上面试"},
+  {idx:11,school:"某本科学院",subject:"数字媒体艺术教师（影视后期方向）",salary:"",info:"某某本科学院招聘：数字媒体艺术教师岗\n要求：硕士研究生及以上\n数字媒体艺术、影视摄影与制作、动画、广播电视编导及相关专业\n精通Pr、Final Cut Pro、AE",area:"",edu:"硕士研究生及以上",exp:"精通Pr、Final Cut Pro、AE",contract:"",extra:""},
+  {idx:12,school:"外国语大学",subject:"汉语言文学、汉语国际、小学教育",salary:"薪资福利5-7k，带薪寒暑假，五险一金",info:"重庆某民办本科学校招聘三名教师\n要求专业对口，硕士生，热爱教育事业\n马上面试，有意向的老师直接发简历",area:"",edu:"硕士研究生，专业对口",exp:"热爱教育事业",contract:"",extra:"带薪寒暑假+五险一金，马上面试"},
+  {idx:13,school:"重庆某大学",subject:"辅导员",salary:"综合月入6000-7500，五险一金，公积金500-800，年终奖两个月工资，餐补400",info:"大学直签辅导员！重庆某大学招聘辅导员\n合同：直签首签三年\n要求：研究生，中共党员，35岁以下",area:"",edu:"研究生",exp:"中共党员，35岁以下",contract:"直签，首签三年",extra:"五险一金+公积金500-800+年终奖两个月+餐补400"},
+  {idx:14,school:"巴南、綦江、渝北某本科院校",subject:"辅导员、专任教师",salary:"",info:"招聘：专任教师、专职辅导员\n学历：硕士研究生及以上\n政治面貌：中共党员、中共预备党员\n专业：经济学、管理学、工学、文学、教育学学科",area:"巴南 綦江 渝北",edu:"硕士研究生及以上，中共党员或预备党员",exp:"",contract:"",extra:""},
+  {idx:15,school:"重庆某大学（行政）",subject:"行政岗（教务处）",salary:"综合月入6000-7500，五险一金，公积金500-800，年终奖两个月工资",info:"大学直签辅导员！重庆某大学招聘行政岗\n岗位:教务处\n合同:直签首签三年\n要求:研究生",area:"",edu:"研究生",exp:"",contract:"直签，首签三年",extra:"五险一金+公积金500-800+年终奖两个月"},
+  {idx:16,school:"两江新区某小学",subject:"语文、数学、英语",salary:"",info:"两江新区某小学语文、数学、英语教师\n要求：全日制本科及以上学历，取得相应学科教师资格证\n热爱教育，无违法犯罪记录",area:"两江新区",edu:"全日制本科及以上，有对应学科教资",exp:"热爱教育，无违法犯罪记录",contract:"",extra:""},
+  {idx:17,school:"广益中学",subject:"高一英语",salary:"5-7k，五险",info:"要求有对应教师资格证，有高中工作经验，本科以上学历，专业对口，9月上岗",area:"",edu:"本科以上，有教资",exp:"有高中工作经验",contract:"",extra:"9月上岗"},
+  {idx:18,school:"二十九中实验学校",subject:"初中语文、初中数学、初中英语",salary:"",info:"解放碑 二十九中实验学校\n有良好师德师风，热爱学生和教育事业\n至少有三年以上教育教学经历（特别优秀者可放宽）\n能胜任班主任管理",area:"解放碑",edu:"本科以上，有教资",exp:"三年以上教育教学经历（特别优秀可放宽）",contract:"",extra:""},
+  {idx:19,school:"珊瑚鲁能",subject:"小学语文、小学数学",salary:"带薪寒暑假，到手薪资6500左右",info:"本科以上学历，有教资，有一年以上教学经验",area:"南岸区",edu:"本科以上，有教资",exp:"一年以上教学经验",contract:"",extra:"带薪寒暑假"},
+  {idx:20,school:"启诚巴蜀",subject:"小学语文、小学英语",salary:"薪资7500+ 交通补贴500",info:"本科以上学历，研究生要求3年教学经验，本科生要求5年教学经验，专业对口，有教资",area:"",edu:"本科以上，有教资",exp:"研究生3年/本科生5年教学经验",contract:"",extra:"交通补贴500/月"},
+  {idx:21,school:"广阳湾刘家坪小学",subject:"小学语文、英语、数学、体育、音乐、道法、美术",salary:"五险一金，到手薪资6000-7000，9月上岗",info:"本科以上学历，有教资，成熟型教师，吃苦耐劳，服从学校安排",area:"南岸区 广阳湾",edu:"本科以上，有教资",exp:"成熟型教师，吃苦耐劳，服从学校安排",contract:"",extra:"五险一金，9月上岗"},
+  {idx:22,school:"珊瑚长嘉汇",subject:"小学语文、数学、英语、音乐、体育（足球）",salary:"五险一金，到手薪资5000-7000，9月上岗",info:"本科以上学历，有教资，成熟型教师，吃苦耐劳，服从学校安排，有教学工作经验优先",area:"南岸区",edu:"本科以上，有教资",exp:"成熟型教师，有教学经验优先",contract:"",extra:"五险一金，9月上岗"},
+  {idx:23,school:"大渡口区自启学校",subject:"小学语文、数学、英语、体育、美术",salary:"语数教师到手6000左右，其他学科4000左右，五险",info:"大渡口某公立小学！五险！\n本科以上学历，有对应学科教资，吃苦耐劳，服从学校安排",area:"大渡口",edu:"本科以上，有对应学科教资",exp:"吃苦耐劳，服从学校安排",contract:"",extra:""},
+  {idx:24,school:"蔡家小学",subject:"小学语文、数学、英语",salary:"到手工资5000左右，买五险，寒暑假工资3300",info:"本科以上学历，有教资，成熟型教师，吃苦耐劳，服从学校安排\n6月份面试",area:"蔡家",edu:"本科以上，有教资",exp:"成熟型教师",contract:"",extra:"寒暑假薪资3300，6月份面试"},
+  {idx:25,school:"鱼洞二小",subject:"小学数学",salary:"到手工资4000-5000",info:"巴南区某某小学招聘\n有教师资格证，大学本科及以上学历，普通话二级乙等及以上",area:"巴南区 鱼洞",edu:"本科以上，有教资，普通话二甲",exp:"",contract:"",extra:""},
+  {idx:26,school:"某公办中学①",subject:"高中：语文、数学、英语、物理、化学、生物、历史、地理、政治、音乐、体育、美术",salary:"",info:"全日制本科及以上学历，取得相应学位\n2025-2026学年度应届毕业生需在入职前取得教师资格证",area:"",edu:"全日制本科及以上",exp:"应届生入职前须取得教资",contract:"",extra:""},
+  {idx:27,school:"某公办中学②",subject:"高中：语文、数学、英语、物理、化学、生物、历史、地理、政治、音乐、体育、美术",salary:"",info:"全日制本科及以上学历，取得相应学位\n2025-2026学年度应届毕业生需在入职前取得教师资格证",area:"",edu:"全日制本科及以上",exp:"应届生入职前须取得教资",contract:"",extra:""},
+  {idx:28,school:"某初中学校",subject:"初中语文2名、数学、英语、物理、化学、生物、历史、道德与法治",salary:"",info:"具有本科及以上学历，专业对口\n已取得相应学科初中及以上教师资格证\n热爱教育事业，关爱学生，有责任心",area:"",edu:"本科及以上，有对应学科教资",exp:"热爱教育事业，有责任心",contract:"",extra:""},
+  {idx:29,school:"某中学（高端岗）",subject:"高中全科（含高考命题方向）",salary:"",info:"岗位要求：省市重点中学6年以上高三毕业班经验\n获市/区级及以上教学荣誉，特级/正高级教师优先\n精通高考命题，能带团队、出成绩",area:"",edu:"本科以上，有高级职称优先",exp:"省市重点中学6年以上高三经验，获市/区级荣誉",contract:"",extra:"特级/正高级教师优先"},
+  {idx:30,school:"天印小学",subject:"语文、数学、英语",salary:"薪资5000+，五险一金足额缴纳，带薪寒暑假",info:"重庆北区某小学招聘\n有教师资格证\n本科及以上学历，专业对口，知识储备扎实",area:"北区",edu:"本科及以上，有教资",exp:"知识储备扎实",contract:"",extra:"五险一金足额+带薪寒暑假"},
+  {idx:31,school:"桂和小学",subject:"语文、数学、英语",salary:"薪资5000+，五险一金足额缴纳，带薪寒暑假",info:"重庆北区某小学招聘\n有教师资格证\n本科及以上学历，专业对口，知识储备扎实",area:"北区",edu:"本科及以上，有教资",exp:"知识储备扎实",contract:"",extra:"五险一金足额+带薪寒暑假"},
+  {idx:32,school:"重庆某高校（思政）",subject:"思政课专任教师",salary:"",info:"重庆某高校专任教师招聘\n取得硕士研究生及以上学历学位，马克思主义理论及其相关专业\n中共党员，年龄40周岁以下",area:"",edu:"硕士研究生及以上，马克思主义理论相关专业",exp:"中共党员，40周岁以下",contract:"",extra:""},
+  {idx:33,school:"璧山机电",subject:"专任教师（财经商贸类）",salary:"薪资7000+，五险一金足额缴纳，带薪寒暑假",info:"重庆某高校专任教师招聘\n年龄在40周岁以下\n经济与管理学院，硕士研究生及以上学历",area:"璧山",edu:"硕士研究生及以上",exp:"40周岁以下",contract:"",extra:"五险一金足额+带薪寒暑假"},
+  {idx:34,school:"重庆某高校（实验管理）",subject:"实验实训管理人员（计算机/网络工程/仪器仪表）",salary:"",info:"重庆某高校招聘实验实训管理人员\n硕士研究生及以上学历\n计算机科学技术、网络工程、仪器仪表维护等相关专业\n年龄40周岁以下",area:"",edu:"硕士研究生及以上",exp:"计算机/网络工程/仪器仪表相关专业，40周岁以下",contract:"",extra:""},
+  {idx:35,school:"重庆某高校（转任）",subject:"转任教师（计算机、物联网、AI、大数据等）",salary:"",info:"重庆某高校招聘转任教师\n硕士研究生及以上学历\n计算机学科、物联网工程、数字媒体技术、虚拟现实、AI、大数据等\n年龄40周岁以下",area:"",edu:"硕士研究生及以上",exp:"40周岁以下，AI/大数据/物联网相关专业",contract:"",extra:""},
+  {idx:36,school:"新学道",subject:"小学英语、小学语文、初中英语、初中数学、初中地理",salary:"月薪到手8K+，买五险，包吃住，带薪寒暑假",info:"本科（学历好一点）、教资，有学校相关教学经验优先",area:"",edu:"本科，有教资",exp:"有学校教学经验优先",contract:"",extra:"包吃住+带薪寒暑假，月薪8K+"},
+  {idx:37,school:"空港小学",subject:"英语",salary:"月薪到手4-6+，买五险，包吃，带薪寒暑假",info:"空港某小学英语教师\n本科、教资，下周一上班",area:"空港",edu:"本科，有教资",exp:"",contract:"",extra:"包吃+带薪寒暑假，下周一可上班"},
+  {idx:38,school:"礼嘉某小学",subject:"语文、数学、英语、思想品德、科学",salary:"薪资5000左右，五险一金足额缴纳，带薪寒暑假",info:"重庆礼嘉某小学招聘\n本科及以上学历且有教师资格证",area:"礼嘉",edu:"本科及以上，有教资",exp:"",contract:"",extra:"五险一金足额+带薪寒暑假"}
+];
+
+var corpData=[
+  {idx:1,school:"中石化龙禹加油站",subject:"加油员（直签岗）",salary:"综合工资6000-10000元，五险一金，年终奖",info:"1. 要求：女性，18-35岁，高中及以上学历\n大专学历可走干部储备方向（管理员→站长晋升通道）\n2. 上班模式：上一休一 / 上二休二\n3. 工作地点：光电园、大学城\n马上面试马上上岗",area:"光电园 大学城",edu:"高中及以上（大专可走管理方向）",exp:"女性，18-35岁",contract:"直签",extra:"上一休一或上二休二，年终奖，马上上岗"},
+  {idx:2,school:"两江消防队（会议服务）",subject:"会议服务",salary:"五险一金，综合工资6000以上，行政班",info:"要求：女性、年龄30岁以内\n大专及以上文化程度，普通话标准\n身高162以上，个人形象优秀\n合同跟单位物业签（消防单位直管）\n工作地点：两江新区",area:"两江新区",edu:"大专及以上，普通话标准",exp:"女性，30岁以内，身高162以上，形象优秀",contract:"单位物业签（消防直管）",extra:"行政班，五险一金"},
+  {idx:3,school:"重庆奕能科技有限公司",subject:"行政后勤",salary:"综合薪资6000左右，五险一金，有住宿交通车工作餐，首签3年",info:"某大型战略新型材料公司（国资部分控股）\n要求：全日制本科学历及以上",area:"",edu:"全日制本科及以上",exp:"",contract:"首签3年",extra:"五险一金+住宿+交通车+工作餐"},
+  {idx:4,school:"某银行远程中心",subject:"远程服务中心工作人员",salary:"培训期2850，转正后综合5000-7000，五险一金，公积金480-2000/月",info:"国企派遣合同\n男女不限，30岁以内，全日制本科以上文凭",area:"",edu:"全日制本科以上",exp:"男女不限，30岁以内",contract:"国企派遣合同",extra:"公积金480-2000/月"},
+  {idx:5,school:"重庆某集团子公司（茶园）",subject:"产品检验技术人员",salary:"4800-6000元，五险一金，包吃包住，节假日福利，年终奖",info:"直签大型国企集团子公司+首签3年+行政班\n大专及以上学历，中专学历可沟通，机械专业优先\n有产品检验工作经验优先",area:"茶园",edu:"大专及以上（中专可沟通）",exp:"机械专业，有产品检验经验优先",contract:"直签，首签3年",extra:"包吃包住+节假日福利+年终奖，行政班"},
+  {idx:6,school:"中国通用技术集团国测时栅科技",subject:"库房管理人员",salary:"综合5500-6000，五险一金，周末双休",info:"央企地方国企岗位\n限女性，大专学历，40岁以内\n具有真实仓库管理工作经验\n熟悉WMS、SAP等ERP软件\n工作地点：高新区金凤",area:"高新区 金凤",edu:"大专，女性，40岁以内",exp:"真实仓库管理经验，熟悉WMS/SAP",contract:"",extra:"周末双休"},
+  {idx:7,school:"渝北某国企（IT）",subject:"信息化专员",salary:"",info:"岗位职责：负责办公电脑、打印机、网络设备故障处理\n负责内部信息系统日常运维\n管理IT类固定资产\n要求：大专及以上，计算机/信息管理/行政管理等，2年以上相关工作经验",area:"渝北",edu:"大专及以上，计算机/信息管理相关专业",exp:"2年以上相关工作经验",contract:"",extra:""},
+  {idx:8,school:"重庆区域某气田",subject:"采气操作员",salary:"",info:"重庆区域采气，下周可以约网上面试\n负责井场日常维护和生产装置巡检\n负责填写检点数据，监控井场生产设备",area:"",edu:"相关专业",exp:"",contract:"",extra:"下周可约网上面试"},
+  {idx:9,school:"万友人力（直签）",subject:"出纳（4S店）",salary:"5000-8000左右，五险，年终奖，单休",info:"国企岗位！安排快！\n4S店出纳，工作轻松简单\n专科及以上，年龄35岁以下，有1年以上从业经验，需持会计证",area:"",edu:"专科及以上，持会计证",exp:"35岁以下，1年以上从业经验",contract:"直签",extra:"4S店，安排速度快"},
+  {idx:10,school:"重庆某光电科技有限公司",subject:"物料部控制管理岗",salary:"综合5500-6000元，五险一金，包吃住，年终奖",info:"直签特大型国企且上市公司+首签5年+无夜班\n35岁以内，男性，全日制4年公办本科，任何理工相关专业\n白班8:30-20:30，上六天休息一天",area:"",edu:"全日制4年公办本科，理工相关专业",exp:"35岁以内，男性",contract:"直签上市公司，首签5年",extra:"包吃住+年终奖，白班无夜班，上六休一"},
+  {idx:11,school:"国家电网电站（巴南/沙坪坝）",subject:"现场管理人员（外包）",salary:"",info:"招聘现场管理人员（外包）\n要求：男性，年龄25-38，需有监控证\n每月上20天，休10天\n工作内容：人员车辆进出核实登记，重点部位巡逻",area:"巴南 沙坪坝",edu:"高中及以上，持监控证",exp:"男性，25-38岁",contract:"外包",extra:"每月上20天休10天"},
+  {idx:12,school:"著名三甲医院（特勤）",subject:"应急特勤队员",salary:"月收入4518+全勤468+双边公积金450，五险一金，月休4天",info:"直签央企重庆人力公司\n年龄22-30岁内，男性，身高170cm以上，高中及同等学历\n12小时两班倒",area:"",edu:"高中及同等学历",exp:"男性，22-30岁，身高170+",contract:"直签央企重庆人力公司",extra:"12小时两班倒，月休4天"},
+  {idx:13,school:"赛力斯汽车公司总部",subject:"行政前台",salary:"实习期4500+300，转正后4800-5100+300，双休",info:"要求：年龄22-27，限女，身高不低于164\n需要有行政前台工作经验，或空乘专业\n工作地点：龙兴，重庆市渝北区两江大道618号",area:"渝北 龙兴",edu:"本科，空乘专业或行政前台经验",exp:"女，22-27岁，身高164+，有行政前台经验",contract:"",extra:"双休，转正后4800-5100+300"},
+  {idx:14,school:"交巡警某某支队（骁骑）",subject:"交巡协警（骁骑）",salary:"到手5000左右，五险一金",info:"每月上班20-25天，8小时（无深夜凌晨班）\n要求：40岁以下，净身高170cm以上，需持有D或E类摩托车驾驶证",area:"",edu:"高中以上，持D/E类摩托车驾照",exp:"40岁以下，身高170+",contract:"",extra:"8小时无深夜班，每月上20-25天"}
+];
+
+// ==================== GitHub云端 + 本地 数据管理 ====================
+var STORAGE_KEY='jobDB_all';
+var GH_TOKEN_KEY='gh_token';
+var GH_USER='williamcowper';
+var GH_REPO='potential-octo-spoon';
+var GH_DATA_URL='https://raw.githubusercontent.com/'+GH_USER+'/'+GH_REPO+'/main/data.json';
+var GH_API_URL='https://api.github.com/repos/'+GH_USER+'/'+GH_REPO+'/contents/data.json';
+var _cloudCache=null;
+var _cloudLoading=false;
+var _cloudSha='';
+
+function getGhToken(){
+  return localStorage.getItem(GH_TOKEN_KEY)||'';
+}
+function setGhToken(t){
+  localStorage.setItem(GH_TOKEN_KEY,t);
+}
+
+function promptToken(){
+  var t=prompt('请输入GitHub令牌（只需输入一次，会自动保存）：\n\n如果还没有，去 https://github.com/settings/tokens/new 创建\n勾选repo，选No expiration');
+  if(t&&t.trim()){
+    setGhToken(t.trim());
+    return t.trim();
+  }
+  return '';
+}
+
+function cloudLoad(){
+  _cloudLoading=true;
+  updateSyncUI('loading');
+  fetch(GH_DATA_URL+'?t='+Date.now(),{cache:'no-store'})
+    .then(function(r){return r.json()})
+    .then(function(obj){
+      _cloudLoading=false;
+      if(obj&&obj.jobs&&obj.jobs.length>0){
+        _cloudCache=obj.jobs;
+        localStorage.setItem(STORAGE_KEY,JSON.stringify(obj.jobs));
+        updateSyncUI('cloud');
+        qRender();
+      }else{
+        var local=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+        if(local.length>0){
+          _cloudCache=local;
+          cloudSave(local);
+        }
+      }
+    })
+    .catch(function(){
+      _cloudLoading=false;
+      var local=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+      if(local.length>0){
+        _cloudCache=local;
+        updateSyncUI('local');
+        qRender();
+      }else{
+        var all=[];
+        schoolData.forEach(function(d){all.push(Object.assign({},d,{type:'school'}))});
+        corpData.forEach(function(d){all.push(Object.assign({},d,{type:'corp'}))});
+        _cloudCache=all;
+        qRender();
+        updateSyncUI('local');
+      }
+    });
+}
+
+function cloudSave(data){
+  var token=getGhToken();
+  if(!token){updateSyncUI('local');return}
+  var obj={version:1,updatedAt:new Date().toISOString(),jobs:data};
+  var jsonStr=JSON.stringify(obj);
+  fetch(GH_API_URL,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github.v3+json'}})
+    .then(function(r){return r.json()})
+    .then(function(info){
+      var sha=info.sha||'';
+      _cloudSha=sha;
+      var b64=btoa(unescape(encodeURIComponent(jsonStr)));
+      return fetch(GH_API_URL,{
+        method:'PUT',
+        headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+        body:JSON.stringify({message:'update data '+new Date().toISOString(),content:b64,sha:sha})
+      });
+    })
+    .then(function(r){
+      if(r.ok){updateSyncUI('cloud');_cloudCache=data}
+      else{updateSyncUI('local')}
+    })
+    .catch(function(){updateSyncUI('local')});
+}
+
+function initFromStatic(){
+  var all=[];
+  schoolData.forEach(function(d){all.push(Object.assign({},d,{type:'school'}))});
+  corpData.forEach(function(d){all.push(Object.assign({},d,{type:'corp'}))});
+  _cloudCache=all;
+  saveAll(all);
+}
+
+function loadAll(){
+  // 优先用内存缓存
+  if(_cloudCache&&_cloudCache.length>0)return _cloudCache;
+  // 再试本地
+  try{
+    var data=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+    if(data.length>0){_cloudCache=data;return data}
+  }catch(e){}
+  return [];
+}
+function saveAll(data){
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
+  cloudSave(data);
+}
+function getSchool(){return loadAll().filter(function(d){return d.type==='school'})}
+function getCorp(){return loadAll().filter(function(d){return d.type==='corp'})}
+function deleteJob(idx){var data=loadAll().filter(function(d){return d.idx!==idx});saveAll(data);_cloudCache=data;showToast('已删除');qRender()}
+function updateJob(idx,fields){var data=loadAll();data.forEach(function(d){if(d.idx===idx){Object.assign(d,fields)}});saveAll(data);_cloudCache=data;showToast('已更新');qRender()}
+
+function updateSyncUI(status){
+  var el=document.getElementById('syncStatus');
+  if(!el)return;
+  if(status==='loading')el.innerHTML='<span class="sync-dot loading"></span>同步中...';
+  else if(status==='cloud')el.innerHTML='<span class="sync-dot cloud"></span>云端已同步';
+  else if(status==='local')el.innerHTML='<span class="sync-dot local"></span>仅本地';
+}
+function forceSync(){cloudLoad()}
+
+// ==================== P1: 岗位查询逻辑 ====================
+var qCurrentTab='all',qCurrentTag='',qCurrentQuery='';
+var qSchoolTags=['语文','数学','英语','体育','音乐','美术','生物','化学','物理','历史','地理','政治','辅导员','计算机','护理','南岸区','两江新区','渝北','巴南','九龙坡'];
+var qCorpTags=['行政','出纳','国企','央企','女性','双休','包吃住','直签','五险一金'];
+
+function qDoSearch(){qCurrentQuery=document.getElementById('qSearchInput').value.trim();qRender()}
+function qClearSearch(){document.getElementById('qSearchInput').value='';qCurrentQuery='';qCurrentTag='';document.querySelectorAll('.q-tag-btn').forEach(b=>b.classList.remove('active'));qRender()}
+function qSwitchTab(tab){qCurrentTab=tab;qCurrentTag='';document.querySelectorAll('.q-tab').forEach(b=>b.classList.remove('active'));document.getElementById('qtab-'+tab).classList.add('active');qBuildTagFilter();qRender()}
+function qSetTag(t){qCurrentTag=(qCurrentTag===t)?'':t;document.querySelectorAll('.q-tag-btn').forEach(b=>{b.classList.toggle('active',b.dataset.tag===qCurrentTag)});qRender()}
+function qBuildTagFilter(){var tags=(qCurrentTab==='corp')?qCorpTags:qSchoolTags;document.getElementById('qTagFilter').innerHTML=tags.map(t=>'<div class="q-tag-btn'+(qCurrentTag===t?' active':'')+'" data-tag="'+t+'" onclick="qSetTag(\''+t+'\')">'+t+'</div>').join('')}
+function qMatchItem(item,q){if(!q&&!qCurrentTag)return true;var fields=[item.school,item.subject,item.salary,item.info,item.area,item.edu,item.exp,item.extra].join(' ').toLowerCase();var qMatch=!q||fields.includes(q.toLowerCase());var tagMatch=!qCurrentTag||fields.includes(qCurrentTag.toLowerCase());return qMatch&&tagMatch}
+function qHighlight(text,q){if(!q||!text)return qEscHtml(text);var re=new RegExp('('+qEscRegex(q)+')','gi');return qEscHtml(text).replace(re,'<span class="q-highlight">$1</span>')}
+function qEscHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function qEscRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+
+function qRender(){
+  var q=qCurrentQuery;
+  var sf=getSchool().filter(function(d){return qMatchItem(d,q)});
+  var cf=getCorp().filter(function(d){return qMatchItem(d,q)});
+  document.getElementById('qcount-all').textContent=sf.length+cf.length;
+  document.getElementById('qcount-school').textContent=sf.length;
+  document.getElementById('qcount-corp').textContent=cf.length;
+  var items=[];
+  if(qCurrentTab==='all'||qCurrentTab==='school')items=items.concat(sf.map(function(d){return Object.assign({},d,{_type:'school'})}));
+  if(qCurrentTab==='all'||qCurrentTab==='corp')items=items.concat(cf.map(function(d){return Object.assign({},d,{_type:'corp'})}));
+  var total=items.length;
+  document.getElementById('qResultsInfo').innerHTML=q?'搜索 "<b>'+qEscHtml(q)+'</b>"'+(qCurrentTag?' + <b>'+qEscHtml(qCurrentTag)+'</b>':'')+' 共 <b>'+total+'</b> 条':'共 <b>'+total+'</b> 条岗位';
+  if(total===0){document.getElementById('qList').innerHTML='<div class="q-no-result"><span>🔍</span>没有相关岗位，换个词试试</div>';return}
+  window._qItems=items;
+  document.getElementById('qList').innerHTML=items.map(function(d,i){
+    var isCorp=d._type==='corp';
+    var bc=isCorp?'#2980b9':'#e74c3c';
+    var tBg=isCorp?'#e8f4fd':'#fff5f5';
+    var tColor=isCorp?'#2980b9':'#e74c3c';
+    var tBorder=isCorp?'#bee3f8':'#fcd';
+    var tLabel=isCorp?'国央企':'学校';
+    var subjects=(d.subject||'').split(/[、，,\/]+/).filter(Boolean);
+    var stHtml=subjects.slice(0,5).map(function(s){return '<span class="q-card-tag subject">'+qHighlight(s.trim(),q)+'</span>'}).join('')+(subjects.length>5?'<span class="q-card-tag subject">+'+(subjects.length-5)+'个学科</span>':'');
+    var salTag=d.salary?'<span class="q-card-tag salary">💰 '+qHighlight(d.salary,q)+'</span>':'';
+    var areaTag=d.area?'<span class="q-card-tag area">📍 '+qHighlight(d.area,q)+'</span>':'';
+    var summary=d.info?d.info.split('\n')[0]:'';
+    return '<div class="q-card" style="border-left-color:'+bc+'"><div class="q-card-head"><div class="q-card-school">'+qHighlight(d.school,q)+'</div><div class="q-card-actions"><button class="q-card-btn edit" onclick="event.stopPropagation();openEditModal('+d.idx+')" title="编辑">✎</button><button class="q-card-btn del" onclick="event.stopPropagation();deleteJob('+d.idx+')" title="删除">✕</button></div></div><div class="q-card-label"><span class="q-card-badge" style="background:'+tBg+';color:'+tColor+';border:1px solid '+tBorder+'">'+tLabel+' #'+d.idx+'</span></div><div class="q-card-tags">'+stHtml+salTag+areaTag+'</div><div class="q-card-summary">'+qHighlight(summary,q)+'</div><div class="q-card-arrow" onclick="qOpenDetail('+i+')">详情 ›</div></div>';
+  }).join('');
+}
+
+function qOpenDetail(i){
+  var d=window._qItems[i];if(!d)return;
+  var isCorp=d._type==='corp';var isCustom=d._custom;
+  var tLabel=isCorp?'国央企':isCustom?'自定义':'学校岗位';
+  var tColor=isCorp?'#2980b9':isCustom?'#2e7d32':'#e74c3c';
+  var tBg=isCorp?'#e8f4fd':isCustom?'#e8f5e9':'#fff5f5';
+  var tBorder=isCorp?'#bee3f8':isCustom?'#a5d6a7':'#fcd';
+  document.getElementById('qModalBadge').textContent=tLabel;
+  document.getElementById('qModalBadge').style.cssText='background:'+tBg+';color:'+tColor+';border:1px solid '+tBorder;
+  document.getElementById('qModalIdx').textContent='#'+d.idx;
+  document.getElementById('qModalTitle').textContent=d.school;
+  var subjects=(d.subject||'').split(/[、，,\/]+/).filter(Boolean);
+  var chipsHtml=subjects.map(function(s){return '<span class="q-subject-chip">'+qEscHtml(s.trim())+'</span>'}).join('');
+  var body='';
+  body+='<div class="q-section"><div class="q-section-title">📋 招聘岗位</div><div class="q-subject-chips">'+chipsHtml+'</div></div>';
+  body+='<div class="q-section"><div class="q-section-title">💰 薪资待遇</div><div class="'+(d.salary?'q-salary-hl':'q-salary-hl empty')+'">'+(d.salary||'薪资面议，具体联系咨询')+'</div></div>';
+  var rows=[{l:'📍 地区',v:d.area},{l:'🎓 学历',v:d.edu},{l:'📌 要求',v:d.exp},{l:'📝 合同',v:d.contract},{l:'🎁 额外福利',v:d.extra}].filter(function(r){return r.v});
+  if(rows.length>0){body+='<div class="q-section"><div class="q-section-title">📄 岗位要求</div>';rows.forEach(function(r){body+='<div class="q-detail-row"><div class="q-detail-label">'+r.l+'</div><div class="q-detail-value">'+qEscHtml(r.v)+'</div></div>'});body+='</div>';}
+  if(d.info){body+='<div class="q-section"><div class="q-section-title">📑 完整说明</div><div class="q-info-block">'+qEscHtml(d.info)+'</div></div>';}
+  document.getElementById('qModalBody').innerHTML=body;
+  document.getElementById('qModalMask').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function qCloseModal(e){if(e.target===document.getElementById('qModalMask'))qHideModal()}
+function qHideModal(){document.getElementById('qModalMask').classList.remove('show');document.body.style.overflow=''}
+
+// ==================== 管理端口 ====================
+function admSmartParse(){
+  var raw=document.getElementById('admRawText').value.trim();
+  if(!raw){showToast('请先粘贴岗位信息');return}
+  var school='',area='',subject='',salary='',edu='',exp='',contract='',extra='',info='';
+  var lines=raw.split('\n').map(function(l){return l.trim()}).filter(function(l){return l});
+
+  // 提取地区
+  var areaMatch=raw.match(/([\u4e00-\u9fa5]+?(?:区|县|市|州))/g);
+  if(areaMatch){
+    area=areaMatch[0];
+    ['重庆','成都','北京','上海','广州','深圳','杭州','武汉','南京','天津','西安','长沙'].forEach(function(c){if(raw.includes(c)&&area.indexOf(c)===-1)area=c+area});
+  }
+  // 提取学校名称
+  var sm=raw.match(/(.{2,8}?(?:中学|小学|大学|学院|学校|院校|幼儿园|培训中心|教育集团|集团|公司|研究院|研究所))/);
+  if(sm){school=sm[0]}else{var ssm=raw.match(/(.{2,6}?(?:招|招聘|聘))/);if(ssm)school=ssm[1].replace(/招|招聘|聘$/,'')+'某学校'}
+  // 提取学科
+  var subjectKW=['语文','数学','英语','物理','化学','生物','政治','思想政治','历史','地理','体育','音乐','美术','信息科技','信息技术','科学','道法','道德与法治','心理','心理健康','品德','书法','日语','法语','德语','西班牙语','俄语','班主任','辅导员','行政','后勤','生活老师','校医','电教','图书馆','实验员','教务','招生','出纳','会计','人事','计算机','编程','STEAM','PBL','戏剧','舞蹈','声乐','器乐','马原','马克思主义','机电','工业设计','电气工程','机械工程','无人机'];
+  var found=[];subjectKW.forEach(function(kw){if(raw.includes(kw)&&found.indexOf(kw)===-1)found.push(kw)});
+  if(found.length>0){
+    subject=found.join('、');
+    var levelMatch=raw.match(/(初[中高]|高[中]?|小[学]?|中[学小]?|全[科段])/);
+    if(levelMatch)subject=levelMatch[1]+'：'+subject;
+  }
+  // 提取薪资
+  var salMatches=[];var salRe=/(?:工资|薪资|年薪|月薪|待遇|综合工资|到[手薪]|薪水)[：:：]?\s*([\d.]+[\-~到—至]\s*[\d.]+\s*万?\/?年?|面议|[\d.]+\s*万?\/?年?[\+＋]?|[\d.]+[-—]\s*[\d.]+)/g;var m;while((m=salRe.exec(raw))!==null)salMatches.push(m[1]);
+  if(salMatches.length>0)salary=salMatches.join('，');
+  if(!salary){var nr=raw.match(/([\d.]+)\s*[-—~到至]\s*([\d.]+)\s*(万|千)/);if(nr)salary=nr[0]}
+  // 提取福利
+  var benefits=['五险一金','五险','一金','包吃','包住','包吃住','三餐','住宿','提供住宿','提供三餐','工作餐','免费班车','定期体检','生活补贴','节日礼金','年终奖','带薪寒暑假','寒暑假','双休','周末双休','子女学费减免','子女就读','教师公寓','职称评定','培训机会','竞赛评优','编制','在编'];
+  var foundBen=[];benefits.forEach(function(b){if(raw.includes(b)&&foundBen.indexOf(b)===-1)foundBen.push(b)});
+  if(foundBen.length>0)extra=foundBen.join('、');
+  // 提取学历经验
+  var reqKW=['本科','硕士','研究生','专科','大专','博士','学士'];
+  var foundEdu=[];reqKW.forEach(function(kw){if(raw.includes(kw)&&foundEdu.indexOf(kw)===-1)foundEdu.push(kw)});
+  if(foundEdu.length>0)edu=foundEdu.join('及以上');
+  var expKW=['35岁','30岁','40岁','45岁','教资','教师资格证','有经验','2年以上','3年以上','应届','党员','专业对口','相关专业','成熟型教师','吃苦耐劳','服从安排','可接受'];
+  var foundExp=[];expKW.forEach(function(kw){if(raw.includes(kw)&&foundExp.indexOf(kw)===-1)foundExp.push(kw)});
+  if(foundExp.length>0)exp=foundExp.join('，');
+  // 提取合同类型
+  if(raw.match(/直签/))contract='直签';
+  else if(raw.match(/派遣/))contract='劳务派遣';
+  else if(raw.match(/外包/))contract='外包';
+  else if(raw.match(/合同/))contract='合同制';
+  else if(raw.match(/正式/))contract='正式编制';
+  else if(raw.match(/临时/))contract='临时';
+  // 判断类型
+  var type='school';
+  if(raw.match(/国企|央企|集团|公司|银行|电网|烟草|石油|铁路|航空|通信|运营商/))type='corp';
+
+  // 填入表单
+  document.getElementById('admType').value=type;
+  if(area)document.getElementById('admArea').value=area;
+  if(school)document.getElementById('admSchool').value=school;
+  if(subject)document.getElementById('admSubject').value=subject;
+  if(salary)document.getElementById('admSalary').value=salary;
+  if(edu)document.getElementById('admEdu').value=edu;
+  if(exp)document.getElementById('admExp').value=exp;
+  if(contract)document.getElementById('admContract').value=contract;
+  if(extra)document.getElementById('admExtra').value=extra;
+  // 详细说明保留原文
+  document.getElementById('admInfo').value=raw;
+
+  // 显示核对区
+  document.getElementById('admPreview').style.display='block';
+  var parsed=['学校','地区','学科','薪资','学历','经验','合同','福利'];
+  var parsedCount=0;
+  if(school)parsedCount++;if(area)parsedCount++;if(subject)parsedCount++;if(salary)parsedCount++;if(edu)parsedCount++;if(exp)parsedCount++;if(contract)parsedCount++;if(extra)parsedCount++;
+  showToast('解析成功！识别到'+parsedCount+'项，请核对修改后点击添加');
+}
+
+function admFillExample(){
+  document.getElementById('admRawText').value='南岸某中学招聘\n\n初高中：语文、数学、英语、物理、化学、生物、政治、历史、地理、体育、音乐、美术\n\n薪资：5000-8000/月，五险一金\n\n要求：本科及以上，有教师资格证，有教学经验优先\n\n学校提供三餐及住宿，带薪寒暑假\n直签合同';
+  showToast('已填入示例，点击"智能解析"');
+}
+
+function openAdmin(){
+  document.getElementById('adminMask').classList.add('show');
+  document.body.style.overflow='hidden';
+  // 渲染全量列表
+  var data=loadAll();
+  var el=document.getElementById('adminAddedList');
+  var html='<div class="admin-added-title">数据库共 <b>'+data.length+'</b> 条岗位</div>';
+  data.forEach(function(d){
+    var isCorp=d.type==='corp';
+    html+='<div class="admin-added-item"><div class="ai-school">'+qEscHtml(d.school)+'</div><div class="ai-subject">'+qEscHtml(d.subject)+(d.salary?' · '+qEscHtml(d.salary):'')+'</div><div class="ai-btns"><button class="ai-edit" onclick="event.stopPropagation();closeAdmin();setTimeout(function(){openEditModal('+d.idx+')},300)">编辑</button><button class="ai-del" onclick="deleteJob('+d.idx+');openAdmin()">删除</button></div></div>';
+  });
+  el.innerHTML=html;
+}
+function hideAdmin(){document.getElementById('adminMask').classList.remove('show');document.body.style.overflow=''}
+
+function submitAdd(){
+  var type=document.getElementById('admType').value;
+  var school=document.getElementById('admSchool').value.trim();
+  var subject=document.getElementById('admSubject').value.trim();
+  if(!school||!subject){showToast('学校名称和学科/岗位必填');return}
+  var data=loadAll();
+  var maxIdx=data.reduce(function(m,d){return Math.max(m,d.idx||0)},0)+1;
+  var entry={idx:maxIdx,type:type,school:school,subject:subject,salary:document.getElementById('admSalary').value.trim(),area:document.getElementById('admArea').value.trim(),edu:document.getElementById('admEdu').value.trim(),exp:document.getElementById('admExp').value.trim(),contract:document.getElementById('admContract').value.trim(),extra:document.getElementById('admExtra').value.trim(),info:document.getElementById('admInfo').value.trim()};
+  data.push(entry);saveAll(data);
+  document.getElementById('admRawText').value='';document.getElementById('admSchool').value='';document.getElementById('admSubject').value='';document.getElementById('admSalary').value='';document.getElementById('admArea').value='';document.getElementById('admEdu').value='';document.getElementById('admExp').value='';document.getElementById('admContract').value='';document.getElementById('admExtra').value='';document.getElementById('admInfo').value='';
+  document.getElementById('admPreview').style.display='none';
+  showToast('✅ 已添加：'+school+' - '+subject);
+  qRender();openAdmin();
+}
+
+function openEditModal(idx){
+  var data=loadAll();
+  var d=data.find(function(x){return x.idx===idx});
+  if(!d){showToast('未找到该岗位');return}
+  document.getElementById('editType').value=d.type||'school';
+  document.getElementById('editArea').value=d.area||'';
+  document.getElementById('editSchool').value=d.school||'';
+  document.getElementById('editSubject').value=d.subject||'';
+  document.getElementById('editSalary').value=d.salary||'';
+  document.getElementById('editEdu').value=d.edu||'';
+  document.getElementById('editExp').value=d.exp||'';
+  document.getElementById('editContract').value=d.contract||'';
+  document.getElementById('editExtra').value=d.extra||'';
+  document.getElementById('editInfo').value=d.info||'';
+  document.getElementById('editMask')._editIdx=idx;
+  document.getElementById('editMask').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeEditModal(){document.getElementById('editMask').classList.remove('show');document.body.style.overflow=''}
+function saveEdit(){
+  var idx=document.getElementById('editMask')._editIdx;
+  if(!idx)return;
+  var school=document.getElementById('editSchool').value.trim();
+  var subject=document.getElementById('editSubject').value.trim();
+  if(!school||!subject){showToast('学校和学科不能为空');return}
+  updateJob(idx,{type:document.getElementById('editType').value,area:document.getElementById('editArea').value.trim(),school:school,subject:subject,salary:document.getElementById('editSalary').value.trim(),edu:document.getElementById('editEdu').value.trim(),exp:document.getElementById('editExp').value.trim(),contract:document.getElementById('editContract').value.trim(),extra:document.getElementById('editExtra').value.trim(),info:document.getElementById('editInfo').value.trim()});
+  closeEditModal();
+}
+
+// ==================== P2: 封面模板 ====================
+var cvT=[
+  {c:'cv-c1',bd:'① 经典居中',lb:'① 衬线居中 · 粉红系',mt:'南岸某中学<br>教师招聘',st:'初高中13学科 · 五险一金<br>三餐+住宿 · 编内同等待遇',hint:'点击上传校园实景图'},
+  {c:'cv-c2',bd:'② 左对齐',lb:'② 快乐体左对齐 · 暖橙系',mt:'南岸某中学<br>全科教师招募',st:'语文·数学·英语·物理·化学<br>生物·历史·地理·政治·体育',hint:'点击上传教学楼实拍',extra:'<div class="tag">热门岗位</div>'},
+  {c:'cv-c3',bd:'③ 横幅深蓝',lb:'③ 庆科黄油体 · 深蓝系',mt:'南岸某中学<br>公开招聘教师',st:'初高中各学科<br>五险一金 · 包吃住 · 面议',hint:'点击上传办公区实拍',banner:'南岸教师招聘速递'},
+  {c:'cv-c4',bd:'④ 右对齐标签',lb:'④ 毛笔行书右对 · 绿系',mt:'南岸某中学<br>待遇曝光',st:'五险一金+三餐+住宿<br>与在编教师同等培训评优',hint:'点击上传校园实拍',tag:'待遇揭秘'},
+  {c:'cv-c5',bd:'⑤ 圆形装饰',lb:'⑤ 衬线圆形 · 金橙系',mt:'南岸中学教师岗<br>上岸机会',st:'初高中13个学科全开放<br>音乐·美术·信息科技也招',hint:'点击上传学校操场实拍',circle:true},
+  {c:'cv-c6',bd:'⑥ 红白双色',lb:'⑥ 黑体双色块 · 红白',mt:'南岸中学<br>教师岗开放',st:'语数外理化生<br>政史地·音体美·信科',hint:'点击上传教学楼图'},
+  {c:'cv-c7',bd:'⑦ 暗色文艺',lb:'⑦ 小薇体暗色 · 墨绿',mt:'南岸某中学<br>教师岗位详情',st:'初高中各学科教师<br>学校提供三餐及住宿',hint:'点击上传学校食堂实拍',line:true},
+  {c:'cv-c8',bd:'⑧ 竖线紫系',lb:'⑧ 毛笔行书竖线 · 紫',mt:'南岸某中学<br>正在招老师',st:'与在编教师同等教育培训<br>竞赛评优机会 · 五险一金',hint:'点击上传培训教室实拍',deco:true},
+  {c:'cv-c9',bd:'⑨ 深绿条纹',lb:'⑨ 快乐体条纹 · 深绿',mt:'南岸中学<br>还缺老师吗？',st:'13个学科全招！<br>包吃住+五险一金+培训评优',hint:'点击上传招聘公告截图',stripe:true},
+  {c:'cv-c10',bd:'⑩ 卡片式',lb:'⑩ 衬线卡片 · 暗色',mt:'南岸某中学<br>教师招聘中',st:'初高中语数外理化生政史地<br>音体美·信息科技',hint:'点击上传学校大门图'},
+  {c:'cv-c11',bd:'⑪ 珊瑚红',lb:'⑪ 毛笔行书 · 珊瑚红',mt:'南岸某中学<br>诚聘教师',st:'工资面议 · 五险一金<br>三餐住宿 · 编内同等待遇',hint:'点击上传校园风景图'},
+  {c:'cv-c12',bd:'⑫ 米黄卡',lb:'⑫ 黑体信息卡 · 米黄',mt:'南岸中学<br>教师岗位信息',st:'初高中 · 13学科<br>五险一金+三餐+住宿',hint:'点击上传学校全景图',card:true},
+  {c:'cv-c13',bd:'⑬ 三条带',lb:'⑬ 小薇体 · 复古棕',mt:'南岸某中学<br>急招各科教师',st:'信息科技·音乐·美术·体育<br>思想政治·历史·地理',hint:'点击上传教师办公室实拍',bandTop:'校园招聘快报',tag:'教师招聘'},
+  {c:'cv-c14',bd:'⑭ 双边框',lb:'⑭ 毛笔行书 · 灰粉',mt:'南岸中学<br>13学科全招',st:'语文·数学·英语·物理·化学<br>生物·政史地·音体美·信科',hint:'点击上传教室实拍图',bars:true},
+  {c:'cv-c15',bd:'⑮ 深紫',lb:'⑮ 黑体大字 · 深紫',mt:'南岸某中学<br>教师招聘',st:'初中·高中各学科<br>五险一金·包吃住·面议',hint:'点击上传学校鸟瞰图',glow:true},
+  {c:'cv-c16',bd:'⑯ 森绿',lb:'⑯ 衬线左标签 · 森绿',mt:'南岸某中学<br>教师岗',st:'初高中13学科<br>工资面议 · 五险一金',hint:'点击上传教学楼全景图',sidebar:true},
+  {c:'cv-c17',bd:'⑰ 暖棕框',lb:'⑰ 毛笔复古框 · 暖棕',mt:'南岸中学<br>教师待遇一览',st:'五险一金+三餐+住宿<br>编内同等教育培训评优',hint:'点击上传学校环境图',frame:true},
+  {c:'cv-c18',bd:'⑱ 宝蓝梯',lb:'⑱ 快乐体梯形 · 宝蓝',mt:'南岸某中学<br>招聘教师',st:'语数外政史地<br>理化生音体美·信息科技',hint:'点击上传校园生活图',trap:true},
+  {c:'cv-c19',bd:'⑲ 暗灰橙',lb:'⑲ 黑体VLOG · 暗灰',mt:'南岸中学教师<br>工作日常',st:'学校提供三餐及住宿<br>与在编教师同等培训机会',hint:'点击上传教师工作照',vlog:true},
+  {c:'cv-c20',bd:'⑳ 灰蓝对半',lb:'⑳ 衬线横分 · 灰蓝',mt:'南岸某中学<br>教师招聘',st:'初高中全科 · 工资面议<br>五险一金 · 包吃住',hint:'点击上传学校外景图',tag:'岗位速递',horizontal:true}
+];
+
+(function initCover(){
+  var grid=document.getElementById('cvGrid');
+  cvT.forEach(function(t,i){
+    var div=document.createElement('div');
+    var inner='<div class="cv-cover '+t.c+'">';
+    if(t.banner)inner+='<div class="banner" contenteditable="true">'+t.banner+'</div>';
+    if(t.circle)inner+='<div class="circle"></div>';
+    if(t.stripe)inner+='<div class="stripe"></div>';
+    if(t.deco)inner+='<div class="deco"></div>';
+    if(t.glow)inner+='<div class="glow"></div>';
+    if(t.vlog)inner+='<div class="vlog">VLOG</div>';
+    if(t.bars)inner+='<div class="left-bar"></div><div class="right-bar"></div>';
+    if(t.sidebar)inner+='<div class="sidebar"><span>五险一金</span><span>包吃住</span><span>同等待遇</span></div>';
+    if(t.bandTop)inner+='<div class="band-top"><span>'+t.bandTop+'</span></div>';
+    if(t.bandTop){
+      inner+='<div class="band-mid">';
+      if(t.tag)inner+='<div class="tag" contenteditable="true">'+t.tag+'</div>';
+      inner+='<div class="mt" contenteditable="true">'+t.mt+'</div>';
+      inner+='<div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }else if(t.card){
+      inner+='<div class="zone"><div class="cv-card-inner">';
+      if(t.tag)inner+='<div class="tag" contenteditable="true">'+t.tag+'</div>';
+      inner+='<div class="mt" contenteditable="true">'+t.mt+'</div>';
+      inner+='<div class="st" contenteditable="true">'+t.st+'</div></div></div>';
+    }else if(t.frame){
+      inner+='<div class="cv-frame"><div class="mt" contenteditable="true">'+t.mt+'</div><div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }else if(t.c==='cv-c10'){
+      inner+='<div class="cv-inner-card"><div class="mt" contenteditable="true">'+t.mt+'</div><div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }else if(t.trap){
+      inner+='<div class="trap"><div class="mt" contenteditable="true">'+t.mt+'</div><div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }else if(t.c==='cv-c6'){
+      inner+='<div class="top"><div class="mt" contenteditable="true">'+t.mt+'</div><div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }else{
+      inner+='<div class="zone">';
+      if(t.tag)inner+='<div class="tag" contenteditable="true">'+t.tag+'</div>';
+      if(t.extra)inner+=t.extra;
+      inner+='<div class="mt" contenteditable="true">'+t.mt+'</div>';
+      if(t.line)inner+='<div class="line"></div>';
+      inner+='<div class="st" contenteditable="true">'+t.st+'</div></div>';
+    }
+    inner+='<div class="cv-ia" id="cvIa'+i+'"><div class="ic">📷</div><span>'+t.hint+'</span><span class="cv-upload-btn">选择图片</span><input type="file" accept="image/*" onchange="cvUpImg(event,'+i+')"></div>';
+    inner+='<div class="bd">'+t.bd+'</div></div><div class="cv-tlabel">'+t.lb+'</div>';
+    div.innerHTML=inner;grid.appendChild(div);
+  });
+})();
+
+function cvUpImg(e,i){
+  var f=e.target.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(ev){
+    var a=document.getElementById('cvIa'+i);
+    a.innerHTML='<div class="cv-img-wrap" id="cvIw'+i+'"><img src="'+ev.target.result+'" id="cvIm'+i+'"></div><input type="file" accept="image/*" onchange="cvUpImg(event,'+i+')" style="position:absolute;width:100%;height:100%;opacity:0;cursor:pointer;z-index:10"><div class="cv-img-tools"><button class="cv-tbtn" onclick="cvZoom('+i+',1)">放大</button><button class="cv-tbtn" onclick="cvZoom('+i+',-1)">缩小</button><button class="cv-tbtn" onclick="cvReset('+i+')">重置</button><button class="cv-tbtn" onclick="document.getElementById(\'cvIa'+i+'\').querySelector(\'input\').click()">换图</button></div><div class="cv-zoom-hint" id="cvZh'+i+'"></div>';
+    var img=document.getElementById('cvIm'+i);img.onload=function(){cvReset(i)};
+    var wrap=document.getElementById('cvIw'+i);wrap.style.cursor='grab';
+    var dragging=false,sx,sy,sox,soy;
+    function ds(e){e.preventDefault();e.stopPropagation();dragging=true;wrap.style.cursor='grabbing';var p=e.touches?e.touches[0]:e;sx=p.clientX;sy=p.clientY;sox=parseFloat(img.dataset.ox||0);soy=parseFloat(img.dataset.oy||0);document.addEventListener('mousemove',dm);document.addEventListener('mouseup',de);document.addEventListener('touchmove',dm,{passive:false});document.addEventListener('touchend',de)}
+    function dm(e){if(!dragging)return;e.preventDefault();var p=e.touches?e.touches[0]:e;cvApplyPos(i,sox+(p.clientX-sx),soy+(p.clientY-sy))}
+    function de(){dragging=false;wrap.style.cursor='grab';document.removeEventListener('mousemove',dm);document.removeEventListener('mouseup',de);document.removeEventListener('touchmove',dm);document.removeEventListener('touchend',de)}
+    wrap.addEventListener('mousedown',ds);wrap.addEventListener('touchstart',ds,{passive:false});
+  };
+  r.readAsDataURL(f);
+}
+function cvApplyPos(i,nx,ny){var img=document.getElementById('cvIm'+i),wrap=document.getElementById('cvIw'+i);if(!img||!wrap)return;var s=parseFloat(img.dataset.scale||1),iw=img.naturalWidth*s,ih=img.naturalHeight*s,cw=wrap.offsetWidth,ch=wrap.offsetHeight;nx=Math.max(-Math.max(0,(iw-cw)/2),Math.min(Math.max(0,(iw-cw)/2),nx));ny=Math.max(-Math.max(0,(ih-ch)/2),Math.min(Math.max(0,(ih-ch)/2),ny));img.dataset.ox=nx;img.dataset.oy=ny;img.style.transform='translate(calc(-50% + '+nx+'px), calc(-50% + '+ny+'px))';cvShowZ(i)}
+function cvReset(i){var img=document.getElementById('cvIm'+i),wrap=document.getElementById('cvIw'+i);if(!img||!wrap)return;var cw=wrap.offsetWidth,ch=wrap.offsetHeight,iw=img.naturalWidth,ih=img.naturalHeight,s=Math.max(cw/iw,ch/ih);img.style.width=(iw*s)+'px';img.style.height=(ih*s)+'px';img.dataset.scale='1';img.dataset.ox='0';img.dataset.oy='0';img.style.transform='translate(-50%,-50%)';cvShowZ(i)}
+function cvShowZ(i){var h=document.getElementById('cvZh'+i),img=document.getElementById('cvIm'+i);if(!h||!img)return;h.textContent=Math.round(parseFloat(img.dataset.scale||1)*100)+'%';h.classList.add('show');clearTimeout(h._t);h._t=setTimeout(function(){h.classList.remove('show')},1200)}
+function cvZoom(i,dir){var img=document.getElementById('cvIm'+i);if(!img)return;var s=parseFloat(img.dataset.scale||1);s=dir>0?Math.min(s+0.2,4):Math.max(s-0.2,0.5);img.dataset.scale=s;img.style.width=(img.naturalWidth*s)+'px';img.style.height=(img.naturalHeight*s)+'px';cvApplyPos(i,parseFloat(img.dataset.ox||0),parseFloat(img.dataset.oy||0))}
+
+// ==================== P3: 文案生成器 ====================
+function cpE(id){return document.getElementById(id)}
+function cpCopyBtn(text){var b=document.createElement('button');b.className='cp-copy-btn';b.textContent='复制';b.onclick=function(e){e.stopPropagation();copyText(text)};return b}
+
+function cpSmartParse(){
+  var raw=cpE('cpRawText').value.trim();if(!raw){showToast('请先粘贴岗位信息');return}
+  var school='',city='',subjects='',salary='',require='',bonus='';
+  var lines=raw.split('\n').map(function(l){return l.trim()}).filter(function(l){return l});
+  var cityMatch=raw.match(/([\u4e00-\u9fa5]+?(?:区|县|市|州))/g);
+  if(cityMatch){city=cityMatch[0];['重庆','成都','北京','上海','广州','深圳','杭州','武汉','南京'].forEach(function(c){if(raw.includes(c))city=c+(cityMatch[0].length>2?cityMatch[0]:'')})}
+  var sm=raw.match(/(.{2,8}?(?:中学|小学|大学|学院|学校|院校|幼儿园|培训中心|教育集团))/);
+  if(sm)school=sm[0];else{var ssm=raw.match(/(.{2,6}?(?:招|招聘|聘))/);if(ssm)school=ssm[1].replace(/招|招聘|聘$/,'')+'某学校'}
+  var subjectKW=['语文','数学','英语','物理','化学','生物','政治','思想政治','历史','地理','体育','音乐','美术','信息科技','信息技术','科学','道法','道德与法治','心理','心理健康','品德','书法','日语','法语','德语','西班牙语','俄语','班主任','辅导员','行政','后勤','生活老师','校医','电教','图书馆','实验员','教务','招生','出纳','会计','人事','计算机','编程','STEAM','PBL','戏剧','舞蹈','声乐','器乐','马原','马克思主义','机电','工业设计','电气工程','机械工程','无人机'];
+  var found=[];subjectKW.forEach(function(kw){if(raw.includes(kw)&&found.indexOf(kw)===-1)found.push(kw)});
+  if(found.length>0){subjects=found.join('、');var levelMatch=raw.match(/(初[中高]|高[中]?|小[学]?|中[学小]?|全[科段])/);if(levelMatch)subjects=levelMatch[1]+'各学科：'+subjects}
+  var salMatches=[];var salRe=/(?:工资|薪资|年薪|月薪|待遇|综合工资|到[手薪]|薪水)[：:：]?\s*([\d.]+[\-~到—至]\s*[\d.]+\s*万?\/?年?|面议|[\d.]+\s*万?\/?年?[\+＋]?|[\d.]+[-—]\s*[\d.]+)/g;var m;while((m=salRe.exec(raw))!==null)salMatches.push(m[1]);if(salMatches.length>0)salary=salMatches.join('，');
+  if(!salary){var nr=raw.match(/([\d.]+)\s*[-—~到至]\s*([\d.]+)\s*(万|千)/);if(nr)salary=nr[0]}
+  var benefits=['五险一金','五险','一金','包吃','包住','包吃住','三餐','住宿','提供住宿','提供三餐','工作餐','免费班车','定期体检','生活补贴','节日礼金','年终奖','带薪寒暑假','寒暑假','双休','周末双休','子女学费减免','子女就读','教师公寓','职称评定','培训机会','竞赛评优','编制','在编'];
+  var foundBen=[];benefits.forEach(function(b){if(raw.includes(b)&&foundBen.indexOf(b)===-1)foundBen.push(b)});if(foundBen.length>0)bonus=foundBen.join('、');
+  var reqKW=['本科','硕士','研究生','专科','大专','博士','学士','35岁','30岁','40岁','45岁','教资','教师资格证','有经验','2年以上','3年以上','应届','党员','专业对口','相关专业','成熟型教师','吃苦耐劳','服从安排'];
+  var foundReq=[];reqKW.forEach(function(kw){if(raw.includes(kw)&&foundReq.indexOf(kw)===-1)foundReq.push(kw)});if(foundReq.length>0)require=foundReq.join('，');
+  if(school)cpE('cpSchool').value=school;if(city)cpE('cpCity').value=city;if(subjects)cpE('cpSubjects').value=subjects;if(salary)cpE('cpSalary').value=salary;if(require)cpE('cpRequire').value=require;if(bonus)cpE('cpBonus').value=bonus;
+  document.querySelectorAll('.cp-parsed-badge').forEach(function(b){b.remove()});
+  if(school)cpAddBadge(cpE('cpSchool'));if(city)cpAddBadge(cpE('cpCity'));if(subjects)cpAddBadge(cpE('cpSubjects'));if(salary)cpAddBadge(cpE('cpSalary'));if(require)cpAddBadge(cpE('cpRequire'));if(bonus)cpAddBadge(cpE('cpBonus'));
+  showToast('解析成功！已自动填入，可手动修改');
+  function cpAddBadge(el){var label=el.previousElementSibling||el.parentElement.querySelector('label');if(label&&!label.querySelector('.cp-parsed-badge')){var b=document.createElement('span');b.className='cp-parsed-badge';b.textContent='已解析';label.appendChild(b)}}
+}
+function cpFillExample(){cpE('cpRawText').value='南岸某中学招聘\n\n初、高中各学科：\n语文、数学、英语、信息科技、音乐、美术、体育、思想政治、历史、地理、物理、化学、生物\n\n薪资待遇：\n1. 工资面议，签约后按规定购买五险一金。\n2. 享有与在编教师同等的教育培训、竞赛评优的机会。\n3. 学校提供三餐及住宿。\n\n要求：本科及以上学历，有教师资格证，有学校工作经验优先。';showToast('已填入示例，点击"智能解析"')}
+
+function cpGetFormData(){return{school:cpE('cpSchool').value.trim()||'某学校',city:cpE('cpCity').value.trim()||'重庆',subjects:cpE('cpSubjects').value.trim()||'各学科教师',salary:cpE('cpSalary').value.trim()||'工资面议',require:cpE('cpRequire').value.trim()||'本科及以上',bonus:cpE('cpBonus').value.trim()||'寒暑假双休',jobtype:cpE('cpJobtype').value,amount:cpE('cpAmount').value}}
+function cpSc(city){var m=city.match(/([\u4e00-\u9fa5]+?(?:区|县))/);if(m)return m[1];var big=city.match(/([\u4e00-\u9fa5]{2,3}(?:市))/);if(big)return big[1];return city.replace(/[省市]/g,'').slice(0,2)||'重庆'}
+function cpSs(s){return s.replace(/某/g,'').replace(/学校|中学|小学|大学|学院|院校|幼儿园/g,'').trim().slice(0,4)||s.slice(0,6)}
+function cpSubs(s){if(!s)return[];s=s.replace(/^(?:初[中高]?|高[中]?|小[学]?|中[学]?|全[科段])\s*(?:各学科|各科|学科|岗位|老师|教师)?[：:：\s]*/,'');return s.replace(/[、，,\n·;；]/g,'/').split('/').map(function(x){return x.replace(/^(?:初[中高]|高[中]|小[学])\s*/,'').trim()}).filter(function(x){return x.length>0&&x.length<10})}
+function cpJl(d){var map={teacher:'老师',admin:'行政',counselor:'班主任助理',fudao:'老师',university:'高校老师',other:'岗'};return map[d.jobtype]||'岗'}
+function cpJf(d){var map={teacher:'教师',admin:'行政',counselor:'班主任助理',fudao:'教师',university:'高校教师/行政',other:'岗位'};return map[d.jobtype]||'岗位'}
+function cpSN(s){var nums=s.match(/([\d.]+)\s*[-—~到至]\s*([\d.]+)\s*(万|千)/);if(nums){var low=parseFloat(nums[1]),high=parseFloat(nums[2]);if(low<1&&nums[3]==='万')return Math.round(low*10000)+'-'+Math.round(high*10000);return low+'-'+high+nums[3]}var single=s.match(/([\d.]+)\s*(万|千)/);if(single){var n=parseFloat(single[1]);if(n<1&&single[2]==='万')return Math.round(n*10000)+'+';return n+'+'+single[2]}return null}
+
+function cpGenerate(){
+  var d=cpGetFormData();if(!d.school&&!d.city&&!d.subjects){showToast('请先填写或解析岗位信息');return}
+  var c=cpSc(d.s),s=cpSs(d.school),jl=cpJl(d),jf=cpJf(d),slist=cpSubs(d.subjects),sn=cpSN(d.salary);
+  var isFew=d.amount==='few';
+  var s3=slist.slice(0,3).join('·')+(slist.length>3?'等':'');
+  var sAll=slist.length>2?slist.join('、'):'全科';
+  var titles=[
+    {f:'① 卖惨式（136评王者）',t:[c+'哪里有'+jl+'\n应聘啊\n我真没招了',s+'急招'+jf+'\n真的招不到了😭\n'+sAll+'都需要！！！',c+'的'+jl+'们\n都找到工作了吗？\n'+s+'还缺人❗❗❗']},
+    {f:'② 地域反问（31评·高泪点）',t:[c+'真的\n没有'+jl+'\n找工作吗😭😭',c+'真的没有\n'+s3+'老师\n在找工作嘛😭😭','毕业了才发现\n'+c+'的'+jf+'岗\n这么难找吗？']},
+    {f:'③ 低门槛冲击（42评·流量密码）',t:['来'+s+'当'+jf+'啦！\n'+d.require+'\n不要教证也行',s+jf+'开放\n'+d.require+'即可\n'+d.bonus,'本科就能进的'+s+'\n'+jf+'岗\n你还在等什么？']},
+    {f:'④ 内推承诺（17评·信任感）',t:[c+s+'\n本人内推❗\n简历合适保进','直接内推✓\n'+s+jf+'\n急急急!!','内推'+s+'的'+jf+'岗\n靠谱·保进·急']},
+    {f:'⑤ 朋辈呼唤（7收藏·亲切感）',t:['在'+c+'当'+jl+'\n真的这么爽！\n'+d.require+'即可','招一个'+c+'的\n'+jl+'搭子！\n'+d.bonus,'谁要来'+s+'\n一起当'+jl+'啊？\n'+d.bonus+'～']},
+    {f:'⑥ 正式公告（51评·搜索命中）',t:[d.school+'\n'+jf+'招聘公告',c+s+'\n公开招聘\n'+sAll,s+'2026'+jf+'\n招聘公告\n'+sAll]},
+    {f:'⑦ 薪资对比（好奇心驱动）',t:['私企8000 vs\n'+s+jf+'\n差距不止工资',(sn?'年薪'+sn+'！':'')+s+jf+'\n待遇曝光\n你猜到手多少',s+jf+'真实收入\n比你想象的高\n'+(sn||d.bonus)]},
+    {f:'⑧ 第一人称（上岸/入职分享）',t:['入职'+s+'了！\n'+jf+'岗\n真实感受分享','朋友在'+s+'当'+jl+'\n跟我说了实话…\n'+d.bonus,'终于上岸了！\n'+s+jf+'岗\n'+d.require+'就能报']},
+    {f:'⑨ 悬念揭秘（高点开率）',t:['原来'+s+'的'+jf+'\n待遇这么好…\n99%的人不知道',c+'这所'+s.replace(/某/g,'')+'\n隐藏福利\n绝了','谁说'+jf+'不好？\n看看'+s+'\n你就懂了']},
+    {f:'⑩ 数据量化（专业可信）',t:[s+'放出'+slist.length+'个'+jf+'岗\n'+(sn||d.salary)+'\n'+d.bonus,c+s+'\n'+jf+'岗'+slist.length+'个学科\n'+d.require+'·'+d.bonus,s+'招聘\n'+slist.length+'个学科·'+jf+'\n'+(sn||d.salary)]},
+    {f:'⑪ 专业定向（精准触达）',t:[slist.length>0?'学'+slist[0]+'专业的来！！\n'+s+'招'+jf+'\n马上面试':s+'急招'+jf+'\n相关专业来！！',slist.length>1?slist[0]+'+'+slist[1]+'专业\n看过来👉\n'+s+jf+'岗':s+jf+'岗\n相关专业速来',slist.length>2?'在'+c+'学'+slist[0]+'的\n现在机会来了\n'+s+jf+'岗开放':s+'招'+jf+'\n机会难得']},
+    {f:'⑫ 极简冲击（大字吸睛）',t:[s+'\n招'+jf+'\n急！！！',c+'\n'+jf+'岗\n最后几个名额',jf+'岗\n'+d.bonus+'\n'+(sn||d.salary)]}
+  ];
+
+  var tc=cpE('cpTitles');tc.innerHTML='';var totalT=0;
+  titles.forEach(function(group){
+    var label=document.createElement('div');label.className='cp-formula-label';label.textContent=group.f;tc.appendChild(label);
+    var show=isFew?group.t.slice(0,2):group.t;
+    show.forEach(function(t){
+      totalT++;var div=document.createElement('div');div.className='cp-title-item';
+      div.innerHTML='<div class="formula">'+group.f+'</div><div class="title-text">'+t.replace(/\n/g,'<br>')+'</div>';
+      div.appendChild(cpCopyBtn(t.replace(/\n/g,' ')));div.onclick=function(){copyText(t.replace(/\n/g,' '))};tc.appendChild(div);
+    });
+  });
+  cpE('cpCountTag').textContent=totalT+'条';
+
+  var bodies=[
+    {s:'① 极简逼评（51评同款）',t:d.school+jf+'招聘中，'+d.salary.split(/[。.]/)[0]+'，'+d.bonus.split(/[。.]/)[0]+'，欢迎加入！'},
+    {s:'② 卖惨引流（136评同款）',t:'急急急！！'+c+'真的没有'+jl+'在找工作吗😭😭\n\n'+d.school+'\n'+(slist.length>0?slist.map(function(x){return'· '+x}).join('\n'):'· 各学科教师')+'\n\n要求：'+d.require+'\n待遇：'+d.salary+'\n福利：'+d.bonus+'\n\n真实正规招聘 有一点服务费宝宝们 可以先丝我 咨询一下不收钱!!!!'},
+    {s:'③ 福利轰炸（高收藏）',t:'来'+d.school+'当'+jf+'啦！\n\n'+d.school+'招聘公告\n\n【招聘岗位】\n'+(slist.length>0?slist.join('、'):'各学科教师')+'\n\n【任职要求】\n'+d.require+'\n'+(d.bonus?'【福利待遇】\n'+d.bonus.split(/[、,，]/).map(function(x){return'✓ '+x}).join('\n'):'')+'\n\n【薪资待遇】\n'+d.salary+'\n\n内推性质 咨询不收费！！！\n100%正规 入职后收取\n快来找我聊聊～～'},
+    {s:'④ 内幕揭秘（好奇心驱动）',t:'怪不得都想当'+jl+'呢\n\n'+d.school+'内部信息流出👇\n\n【岗位】\n'+(slist.length>0?slist.map(function(x){return'- '+x+'：若干人'}).join('\n'):'- 各学科教师')+'\n\n【薪资待遇（内部消息）】\n'+d.salary+'\n'+(d.bonus?'【隐藏福利】\n'+d.bonus:'')+'\n\n【要求】'+d.require+'\n\n信息有限 先到先得\n感兴趣的带学科私我'},
+    {s:'⑤ 上岸分享（第一人称·高信任感）',t:'终于入职了！！分享一下'+d.school+jf+'的真实情况\n\n先说待遇👇\n'+d.salary+'\n'+(d.bonus?'再说福利：\n'+d.bonus:'')+'\n\n再说要求：\n'+d.require+'\n\n日常就是正常上下班 没那么多乱七八糟的事 同事关系简单\n\n有想了解的直接问 知道的都告诉你🙋'},
+    {s:'⑥ 朋友圈式（日常感·低广告味）',t:'今天又有人问我'+d.school+'还招不招'+jf+'\n\n统一回复：还在招！！\n\n'+(slist.length>0?'要的学科：'+slist.join('、'):'各学科都在招')+'\n要求'+d.require+'\n'+(d.bonus?'福利有'+d.bonus:'')+'\n'+(d.salary?'薪资'+d.salary:'')+'\n\n有意向的直接滴滴我 不要害羞😂'},
+    {s:'⑦ 对比分析（理性说服·高收藏）',t:'帮大家对比一下'+c+jf+'的几个选择👇\n\n【'+d.school+'】\n岗位：'+(slist.length>0?slist.join('、'):'各学科')+'\n要求：'+d.require+'\n薪资：'+d.salary+'\n福利：'+(d.bonus||'五险一金·带薪休假')+'\n\n为什么推荐这个？\n'+(d.bonus?d.bonus.split(/[、,，]/).map(function(x){return'👉 '+x}).join('\n'):'👉 五险一金\n👉 带薪寒暑假\n👉 稳定')+'\n\n有问题的直接问'},
+    {s:'⑧ 紧急通知（紧迫感·FOMO）',t:'⚠️ 最后补录！\n\n'+d.school+jf+'岗还有最后几个名额\n\n'+(slist.length>0?'急缺学科：\n'+slist.map(function(x){return'◆ '+x}).join('\n'):'急招各学科教师')+'\n\n'+d.require+'\n'+(d.salary?'薪资：'+d.salary:'')+'\n'+(d.bonus?'福利：'+d.bonus:'')+'\n\n名额不多了 想上的速度私聊\n不要犹豫 犹豫就没了'}
+  ];
+
+  var bc=cpE('cpBodies');bc.innerHTML='';
+  var showBodies=isFew?bodies.slice(0,4):bodies;
+  showBodies.forEach(function(b){var div=document.createElement('div');div.className='cp-body-card';div.innerHTML='<div class="style-name">'+b.s+'</div><div class="body-text">'+b.t+'</div>';div.querySelector('.body-text').appendChild(cpCopyBtn(b.t));bc.appendChild(div)});
+
+  var jmap={teacher:'中小学教师',admin:'行政岗',counselor:'班主任助理',fudao:'教育培训',university:'高校教师',other:'招聘'};var jt=jmap[d.jobtype]||'招聘';
+  var tags=[{t:'#'+d.city+'找工作',must:true},{t:'#'+d.city+'招聘',must:true},{t:'#'+jt,must:true},{t:'#工作推荐'},{t:'#'+c+'好工作'},{t:'#'+c+'就业'},{t:'#求职招聘'},{t:'#内推'},{t:'#高薪工作'},{t:'#令人心动的工作'},{t:'#好多职位可以选择'}];
+  if(d.bonus.includes('双休'))tags.push({t:'#周末双休'});if(d.bonus.includes('寒暑假'))tags.push({t:'#带薪寒暑假'});if(d.salary.includes('五险一金')||d.bonus.includes('五险一金'))tags.push({t:'#五险一金'});
+  if(d.jobtype==='teacher')tags.push({t:'#教师职业发展'});if(d.jobtype==='counselor')tags.push({t:'#私立学校老师'});if(d.jobtype==='university')tags.push({t:'#高校就业'});if(d.jobtype==='admin')tags.push({t:'#行政工作'});
+  slist.slice(0,3).forEach(function(x){if(x.length<=6)tags.push({t:'#'+x})});
+  var month=new Date().getMonth();if(month>=1&&month<=3)tags.push({t:'#春招'});else if(month>=8&&month<=10)tags.push({t:'#秋招'});
+  var seen=new Set();tags=tags.filter(function(tg){if(seen.has(tg.t))return false;seen.add(tg.t);return true});
+  var tagc=cpE('cpTags');tagc.innerHTML='';
+  tags.forEach(function(tg){var span=document.createElement('span');span.className='cp-tag-chip'+(tg.must?' must':'');span.textContent=tg.t;span.onclick=function(){copyText(tg.t);span.style.background='#ff6b35';span.style.color='#fff';span.style.borderColor='#ff6b35'};tagc.appendChild(span)});
+  var allTags=tags.map(function(t){return t.t}).join(' ');
+  var allBtn=document.createElement('span');allBtn.className='cp-tag-chip';allBtn.textContent='复制全部';allBtn.style.cssText='background:#ff6b35;color:#fff;border-color:#ff6b35;font-weight:700';allBtn.onclick=function(){copyText(allTags)};tagc.appendChild(allBtn);
+
+  var replies=[
+    {scene:'用户问"有XX学科吗"',text:'有✓ 直接发简历我帮你看'},
+    {scene:'用户问"费用多少"',text:'先了解一下岗位 咨询不收费的 入职时才收💰'},
+    {scene:'用户问"要教证吗"',text:d.require.includes('不')||!d.require.includes('教')?'这个岗位不需要教证！速度来':'有教证优先 没有的也可以先看看'},
+    {scene:'用户问"年龄超了可以吗"',text:'先看一下简历 超不多可以帮问问的'},
+    {scene:'用户发学科名（如"数学""化学"）',text:'👌'},
+    {scene:'用户问"哪个学校"',text:'私聊发你详细信息～'},
+    {scene:'用户问"是第三方吗"',text:'正规渠道 内推直签 可以先了解'},
+    {scene:'用户问"工资多少"',text:d.salary||'薪资面议 具体看学历和经验'},
+    {scene:'用户问"有寒暑假吗"',text:d.bonus.includes('寒暑假')?'有的✓ 带薪寒暑假':'具体看岗位安排 可以私聊了解'},
+    {scene:'用户问"包吃住吗"',text:d.bonus.includes('吃')||d.bonus.includes('住')?'包的✓ 三餐+住宿':'有工作餐 住宿看具体安排'},
+    {scene:'用户说"dd""滴滴"',text:'来了！发学科 我帮你查'},
+    {scene:'用户问"正规吗"',text:'100%正规 可以先了解 不收咨询费'},
+    {scene:'用户问"怎么报名"',text:'发简历给我 帮你对接 直接面试'},
+    {scene:'用户问"在哪里"',text:c+d.school.replace(/某/,'').replace(/学校|中学|小学/,'')},
+    {scene:'用户质疑"真的假的"',text:'真的 不信可以先了解 咨询又不花钱😊'}
+  ];
+  var rc=cpE('cpReplies');rc.innerHTML='';
+  replies.forEach(function(r){var div=document.createElement('div');div.className='cp-reply-item';div.innerHTML='<div class="scene">'+r.scene+'</div>'+r.text;div.appendChild(cpCopyBtn(r.text));rc.appendChild(div)});
+
+  cpE('cpOutput').classList.add('show');
+  cpE('cpOutput').scrollIntoView({behavior:'smooth',block:'start'});
+  showToast('生成'+totalT+'条标题 + '+showBodies.length+'篇正文');
+}
+
+// ==================== 初始化 ====================
+switchPage('query');
+qBuildTagFilter();
+// 先用本地数据渲染，再异步从云端同步
+(function(){
+  var local=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+  if(local.length>0){_cloudCache=local;qRender()}
+  else{
+    // 没有本地数据，先显示静态数据，等cloudLoad决定是否覆盖
+    var all=[];
+    schoolData.forEach(function(d){all.push(Object.assign({},d,{type:'school'}))});
+    corpData.forEach(function(d){all.push(Object.assign({},d,{type:'corp'}))});
+    _cloudCache=all;
+    qRender();
+  }
+  cloudLoad();
+})();
+// ==================== PWA Service Worker ====================
+if('serviceWorker' in navigator){
+  var swCode='self.addEventListener("install",function(e){self.skipWaiting()});self.addEventListener("activate",function(e){e.waitUntil(clients.claim())});self.addEventListener("fetch",function(e){e.respondWith(fetch(e.request).catch(function(){return caches.match(e.request)}))})';
+  var swBlob=new Blob([swCode],{type:'application/javascript'});
+  var swUrl=URL.createObjectURL(swBlob);
+  navigator.serviceWorker.register(swUrl).catch(function(){});
+}
+</script>
+</body>
+</html>
